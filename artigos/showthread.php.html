@@ -1,0 +1,3291 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html dir="ltr" xmlns="http://www.w3.org/1999/xhtml" lang="en"><head>
+
+
+	<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<meta name="generator" content="vBulletin 3.7.3">
+
+<meta name="keywords" content=" C++ String: How to convert a string into
+ a numeric type?, Visual 
+C++,C++,CodeGuru,Code,Guru,.NET,Microsoft,C#,Visual 
+Basic,Coding,forum,bbs,discussion">
+<meta name="description" content=" C++ String: How to convert a string 
+into a numeric type? CodeGuru Individual FAQs">
+
+
+
+<!-- CSS Stylesheet -->
+<style type="text/css" id="vbulletin_css">
+/**
+* vBulletin 3.7.3 CSS
+* Style: 'CodeGuru Forumsredesign3.7.3'; Style ID: 5
+*/
+body
+{
+	background: #053061;
+	color: #000000;
+	font: 10pt verdana, geneva, lucida, 'lucida grande', arial, helvetica, sans-serif;
+	margin: 5px 10px 10px 10px;
+}
+a:link, body_alink
+{
+	color: #053061;
+}
+a:visited, body_avisited
+{
+	color: #053061;
+}
+a:hover, a:active, body_ahover
+{
+	color: #FF4400;
+}
+.page
+{
+	background: #FFFFFF;
+	color: #000000;
+}
+td, th, p, li
+{
+	font: 10pt verdana, geneva, lucida, 'lucida grande', arial, helvetica, sans-serif;
+}
+.tborder
+{
+	background: #5b5d43;
+	color: #000000;
+	border: 1px solid #0B198C;
+}
+.tcat
+{
+	background: #727453;
+	color: #FFFFFF;
+	font: bold 10pt verdana, geneva, lucida, 'lucida grande', arial, helvetica, sans-serif;
+}
+.tcat a:link, .tcat_alink
+{
+	color: #ffffff;
+	text-decoration: none;
+}
+.tcat a:visited, .tcat_avisited
+{
+	color: #ffffff;
+	text-decoration: none;
+}
+.tcat a:hover, .tcat a:active, .tcat_ahover
+{
+	color: #FFFF66;
+	text-decoration: underline;
+}
+.thead
+{
+	background: #5b5d43;
+	color: #FFFFFF;
+	font: bold 11px tahoma, verdana, geneva, lucida, 'lucida grande', arial, helvetica, sans-serif;
+}
+.thead a:link, .thead_alink
+{
+	color: #FFFFFF;
+}
+.thead a:visited, .thead_avisited
+{
+	color: #FFFFFF;
+}
+.thead a:hover, .thead a:active, .thead_ahover
+{
+	color: #FFFF00;
+}
+.tfoot
+{
+	background: #727453;
+	color: #FFFFFF;
+}
+.tfoot a:link, .tfoot_alink
+{
+	color: #FFFFFF;
+}
+.tfoot a:visited, .tfoot_avisited
+{
+	color: #FFFFFF;
+}
+.tfoot a:hover, .tfoot a:active, .tfoot_ahover
+{
+	color: #FFFF66;
+}
+.alt1, .alt1Active
+{
+	background: #F5F5FF;
+	color: #000000;
+}
+.alt2, .alt2Active
+{
+	background: #DDDDDD;
+	color: #000000;
+}
+.inlinemod
+{
+	background: #FFFFCC;
+	color: #000000;
+}
+.wysiwyg
+{
+	background: #DDDDDD;
+	color: #000000;
+	font: 10pt verdana, geneva, lucida, 'lucida grande', arial, helvetica, sans-serif;
+	margin: 5px 10px 10px 10px;
+	padding: 0px;
+}
+.wysiwyg a:link, .wysiwyg_alink
+{
+	color: #22229C;
+}
+.wysiwyg a:visited, .wysiwyg_avisited
+{
+	color: #22229C;
+}
+.wysiwyg a:hover, .wysiwyg a:active, .wysiwyg_ahover
+{
+	color: #FF4400;
+}
+textarea, .bginput
+{
+	font: 10pt verdana, geneva, lucida, 'lucida grande', arial, helvetica, sans-serif;
+}
+.bginput option, .bginput optgroup
+{
+	font-size: 10pt;
+	font-family: verdana, geneva, lucida, 'lucida grande', arial, helvetica, sans-serif;
+}
+.button
+{
+	font: 11px verdana, geneva, lucida, 'lucida grande', arial, helvetica, sans-serif;
+}
+select
+{
+	font: 11px verdana, geneva, lucida, 'lucida grande', arial, helvetica, sans-serif;
+}
+option, optgroup
+{
+	font-size: 11px;
+	font-family: verdana, geneva, lucida, 'lucida grande', arial, helvetica, sans-serif;
+}
+.smallfont
+{
+	font: 11px verdana, geneva, lucida, 'lucida grande', arial, helvetica, sans-serif;
+}
+.time
+{
+	color: #333333;
+}
+.navbar
+{
+	font: 11px verdana, geneva, lucida, 'lucida grande', arial, helvetica, sans-serif;
+}
+.highlight
+{
+	color: #FF0000;
+	font-weight: bold;
+}
+.fjsel
+{
+	background: #053061;
+	color: #DDDDDD;
+}
+.fjdpth0
+{
+	background: #F7F7F7;
+	color: #000000;
+}
+.panel
+{
+	background: #CCCCCC;
+	color: #000000;
+	padding: 10px;
+	border: 2px outset;
+}
+.panelsurround
+{
+	background: #CCCCCC;
+	color: #000000;
+}
+legend
+{
+	color: #22229C;
+	font: 11px tahoma, verdana, geneva, lucida, 'lucida grande', arial, helvetica, sans-serif;
+}
+.vbmenu_control
+{
+	background: #727453;
+	color: #FFFFFF;
+	font: bold 11px tahoma, verdana, geneva, lucida, 'lucida grande', arial, helvetica, sans-serif;
+	padding: 3px 6px 3px 6px;
+	white-space: nowrap;
+}
+.vbmenu_control a:link, .vbmenu_control_alink
+{
+	color: #FFFFFF;
+	text-decoration: none;
+}
+.vbmenu_control a:visited, .vbmenu_control_avisited
+{
+	color: #FFFFFF;
+	text-decoration: none;
+}
+.vbmenu_control a:hover, .vbmenu_control a:active, .vbmenu_control_ahover
+{
+	color: #FFFFFF;
+	text-decoration: underline;
+}
+.vbmenu_popup
+{
+	background: #FFFFFF;
+	color: #000000;
+	border: 1px solid #0B198C;
+}
+.vbmenu_option
+{
+	background: #CCCCCC;
+	color: #000000;
+	font: 11px verdana, geneva, lucida, 'lucida grande', arial, helvetica, sans-serif;
+	white-space: nowrap;
+	cursor: pointer;
+}
+.vbmenu_option a:link, .vbmenu_option_alink
+{
+	color: #22229C;
+	text-decoration: none;
+}
+.vbmenu_option a:visited, .vbmenu_option_avisited
+{
+	color: #22229C;
+	text-decoration: none;
+}
+.vbmenu_option a:hover, .vbmenu_option a:active, .vbmenu_option_ahover
+{
+	color: #FFFFFF;
+	text-decoration: none;
+}
+.vbmenu_hilite
+{
+	background: #8A949E;
+	color: #FFFFFF;
+	font: 11px verdana, geneva, lucida, 'lucida grande', arial, helvetica, sans-serif;
+	white-space: nowrap;
+	cursor: pointer;
+}
+.vbmenu_hilite a:link, .vbmenu_hilite_alink
+{
+	color: #FFFFFF;
+	text-decoration: none;
+}
+.vbmenu_hilite a:visited, .vbmenu_hilite_avisited
+{
+	color: #FFFFFF;
+	text-decoration: none;
+}
+.vbmenu_hilite a:hover, .vbmenu_hilite a:active, .vbmenu_hilite_ahover
+{
+	color: #FFFFFF;
+	text-decoration: none;
+}
+/* ***** styling for 'big' usernames on postbit etc. ***** */
+.bigusername { font-size: 14pt; }
+
+/* ***** small padding on 'thead' elements ***** */
+td.thead, div.thead { padding: 4px; }
+
+/* ***** basic styles for multi-page nav elements */
+.pagenav a { text-decoration: none; }
+.pagenav td { padding: 2px 4px 2px 4px; }
+
+/* ***** define margin and font-size for elements inside panels ***** */
+.fieldset { margin-bottom: 6px; }
+.fieldset, .fieldset td, .fieldset p, .fieldset li { font-size: 11px; }
+
+/* ***** don't change the following ***** */
+form { display: inline; }
+label { cursor: default; }
+.normal { font-weight: normal; }
+.inlineimg { vertical-align: middle; }
+
+BODY {
+	SCROLLBAR-BASE-COLOR: {categorybackcolor};
+	SCROLLBAR-ARROW-COLOR: {categoryfontcolor};
+}
+SELECT {
+	FONT-FAMILY: Verdana,Arial,Helvetica,sans-serif;
+	FONT-SIZE: 11px;
+	COLOR: #000000;
+	BACKGROUND-COLOR: #CFCFCF
+}
+TEXTAREA, .bginput {
+	FONT-SIZE: 12px;
+	FONT-FAMILY: Verdana,Arial,Helvetica,sans-serif;
+	COLOR: #000000;
+	BACKGROUND-COLOR: #CFCFCF
+}
+A:link.os {
+ font-family: Verdana, Helvetica, sans-serif;
+ font-size: 12px;
+ color: #F1F1F1;
+} 
+A:visited.os {
+ font-family: Verdana, Helvetica, sans-serif;
+ font-size: 12px;
+ color: #F1F1F1;
+}
+A:link, A:visited, A:active {
+	COLOR: {linkcolor};
+}
+A:hover {
+	COLOR: {hovercolor};
+}
+#cat A:link, #cat A:visited, #cat A:active {
+	COLOR: {categoryfontcolor};
+	TEXT-DECORATION: none;
+}
+#cat A:hover {
+	COLOR: {categoryfontcolor};
+	TEXT-DECORATION: underline;
+}
+#ltlink A:link, #ltlink A:visited, #ltlink A:active {
+	COLOR: {linkcolor};
+	TEXT-DECORATION: none;
+}
+#ltlink A:hover {
+	COLOR: {hovercolor};
+	TEXT-DECORATION: underline;
+}
+.thtcolor {
+	COLOR: {tableheadtextcolor};
+}
+
+#aup  { font-size:10pt }
+.clickhere { cursor:pointer }
+
+/* RSS stlying */
+
+.rssttl {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 9px;
+	font-style: normal;
+	color: #000000;
+	font-weight: bold;
+	
+		margin: 0px 0;
+	padding: 0;
+}
+/* begin styles for RSS Feed */
+
+.rss_box {
+	width: 325px;
+	background-color: #EEEEEE;
+	text-align: left;
+	vertical-align: middle;
+	margin: 0px;
+	padding: 0px;
+	height: 100%;
+}
+.rss_items {
+	padding:5px;
+	color:#000000;
+	margin: 0px;
+
+}
+p.rss_title {
+	margin: 0px;
+	padding:3px;
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	font-weight: bolder;
+	color: #FFFFCC;
+	background-color:#FFFFFF;
+	border-top: 1px solid #727453;
+	border-right: 1px solid #727453;
+	border-bottom: 1px solid #727453;
+	border-left: 1px solid #727453;
+	
+	
+}
+.rss_title, rss_title a {
+	text-decoration: none;
+	font-family: verdana, sans-serif;
+	font-size: 9px
+	background-color:#DDDDDD;
+	color:#000000;
+	font-weight:bold;
+	margin: 0px;
+	padding:0px;
+	text-align: left;
+	font-size: 12px;
+	border-left-width: 0px;
+	border-left-style: solid;
+	border-left-color: #ffffff;
+}
+
+.rss_item  {
+	font-family: verdana, arial, sans-serif;
+	font-size: 9px;
+	font-weight : normal;
+	color: #000000;
+	list-style:none;
+	margin-bottom: 6px;
+	padding:0;
+      
+         overflow:hidden
+}
+
+.rss_item a {
+	color:#053061;
+	font-size: 11px;
+	font-weight:bold;
+	font-family: Arial, Helvetica, sans-serif;
+	font-style: normal;
+	text-decoration: none;
+	text-indent: 0px;
+	line-height: 12px;
+	letter-spacing: normal;
+	text-align: left;
+	vertical-align: bottom;
+	word-spacing: normal;
+	}
+	
+.rss_item a:visited {
+	color:#053061;
+}
+.rss_item a:hover {
+	color:#053061;
+	text-decoration: underline;
+}
+
+.rss_date {
+	font-size: 10px;
+	font-weight : normal;
+	color: #0033CC;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	}
+</style>
+<link rel="stylesheet" type="text/css" 
+href="showthread.php_arquivos/vbulletin_important.css">
+
+
+<!-- / CSS Stylesheet -->
+
+      
+
+<script language="JavaScript"> 
+<!-- 
+OAS_url = 'http://mjxads.internet.com/RealMedia/ads/'; 
+OAS_sitepage ='intm/webdev/www.codeguru.com/forum'; 
+OAS_listpos = '234x60-1,234x60-2,125x800,125x125-1,468x60-1,468x60-2,cp1,cp10,cp11,cp12,cp13,cp2,cp3,cp4,cp5,cp6,cp7,cp8,cp9,flex,send,stickypost,house_ribbon,336x280,336x280-2,sponsor-20'; 
+OAS_query = ''; 
+OAS_target = '_top'; 
+OAS_version = 10; 
+OAS_rn = '001234567890'; OAS_rns = '1234567890'; 
+OAS_rn = new String (Math.random()); OAS_rns = OAS_rn.substring (2, 11); 
+function OAS_NORMAL(pos) { 
+var_a=('<A HREF="' + OAS_url + 'click_nx.cgi/' + OAS_sitepage ); 
+var_b=(var_a + '/1' + OAS_rns + '@' + OAS_listpos + '!' + pos + '?' ); 
+var_c=(var_b+ OAS_query + '" TARGET=' + OAS_target + '>'); 
+document.write(var_c); 
+var_aa=('<IMG SRC="' + OAS_url + 'adstream_nx.cgi/' + OAS_sitepage ); 
+var_bb=( var_aa + '/1' + OAS_rns + '@' + OAS_listpos + '!' + pos + '?'); 
+var_cc=( var_bb + OAS_query + '" BORDER=0></A>'); 
+document.write(var_cc); 
+} 
+//--> 
+</script> 
+
+<script language="JavaScript1.1"> 
+<!-- 
+OAS_version = 11; 
+if (navigator.userAgent.indexOf('Mozilla/3') != -1 ) 
+OAS_version = 10; 
+if (navigator.userAgent.indexOf('Mozilla/4.0 WebTV') != -1) 
+OAS_version = 10; 
+if (OAS_version >= 11) { 
+var_aaa=('<SCRIPT LANGUAGE=JavaScript1.1 SRC="' + OAS_url); 
+var_bbb=(var_aaa + 'adstream_mjx.ads/' + OAS_sitepage + '/1'); 
+var_ccc=(var_bbb + OAS_rns + '@' + OAS_listpos + '?' + OAS_query ); 
+var_ddd=(var_ccc + '"><\/SCRIPT>'); 
+document.write(var_ddd); 
+} 
+//--> 
+</script><script language="JavaScript1.1" src="showthread.php_arquivos/1177124402234x60-1234x60-2125x800125x125-1468x60-1468x60-2cp1.js"></script>
+ 
+
+<script language="JavaScript"> 
+<!-- 
+document.write(''); 
+function OAS_AD(pos) { 
+if (OAS_version >= 11) 
+OAS_RICH(pos); 
+else 
+OAS_NORMAL(pos); 
+} 
+//--> 
+</script>
+
+<script type="text/javascript" src="showthread.php_arquivos/yahoo-dom-event.js"></script>
+<script type="text/javascript" src="showthread.php_arquivos/connection-min.js"></script>
+<script type="text/javascript">
+<!--
+var SESSIONURL = "s=8497326d54d22f1db976ee4d3c222864&";
+var SECURITYTOKEN = "guest";
+var IMGDIR_MISC = "images/misc";
+var vb_disable_ajax = parseInt("0", 10);
+// -->
+</script>
+<script type="text/javascript" src="showthread.php_arquivos/vbulletin_global.js"></script>
+<script type="text/javascript" src="showthread.php_arquivos/vbulletin_menu.js"></script>
+
+
+	<link rel="alternate" type="application/rss+xml" title="CodeGuru Forums
+ RSS Feed" href="http://www.codeguru.com/forum/external.php?type=RSS2">
+	
+		<link rel="alternate" type="application/rss+xml" title="CodeGuru 
+Forums - CodeGuru Individual FAQs - RSS Feed" 
+href="http://www.codeguru.com/forum/external.php?type=RSS2&amp;forumids=81">
+	
+
+
+<script type="text/JavaScript">
+<!--
+function xmlhttpPost(strURL) {
+
+var superTracker = _gat._getTracker("UA-2838492-1"); 
+ superTracker._initData();
+ superTracker._trackPageview();
+ 
+    pageTracker._initData();
+    pageTracker._trackPageview();
+
+    var xmlHttpReq = false;
+    var self = this;
+    // gecko/opera/safari
+    if (window.XMLHttpRequest) {
+        self.xmlHttpReq = new XMLHttpRequest();
+    }
+    // IE
+    else if (window.ActiveXObject) {
+        self.xmlHttpReq = new ActiveXObject("Microsoft.XMLHTTP");
+    }
+    self.xmlHttpReq.open('POST', strURL, true);
+    self.xmlHttpReq.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+    self.xmlHttpReq.onreadystatechange = function() {
+        if (self.xmlHttpReq.readyState == 4) {
+            updatepage(self.xmlHttpReq.responseText);
+        }
+    }
+    self.xmlHttpReq.send(getquerystring());
+}
+
+function getquerystring() {
+
+qstr='<?'+
+ 'oas_setup("intm/webdev/www.codeguru.com/forum@'+
+ '468x60-1,336x280,336x280-2,468x60-2,'+
+ 'echo oas_ad(\'OAS_468-1\');'+
+ '?>';
+
+    return qstr;
+
+}
+
+function updatepage(str){
+var ads=str.split('|');
+
+var bob=ads[0];
+var bot=ads[1];
+
+    
+    document.getElementById("bob").innerHTML = bob;
+    document.getElementById("bot").innerHTML = bot;
+
+}
+//-->
+</script>
+	<title> C++ String: How to convert a string into a numeric type? - 
+CodeGuru Forums</title>
+	<script type="text/javascript" src="showthread.php_arquivos/vbulletin_post_loader.js"></script>
+	<style type="text/css" id="vbulletin_showthread_css">
+	<!--
+	
+	#links div { white-space: nowrap; }
+	#links img { vertical-align: middle; }
+	-->
+	</style>
+<title>CodeGuru Forums - </title></head><body onload=""><script src="showthread.php_arquivos/772567881.js" type="text/javascript"></script>
+
+
+
+	
+
+
+
+
+ 
+<script language="JavaScript"> 
+<!-- 
+OAS_AD('house_ribbon'); 
+//--> 
+</script>
+
+<!-- JP -->
+<!-- blj - changed bgcolor="FFFFFF" to class="vbmenu_control" in columns -->
+
+<table background="" bgcolor="000000" border="0" cellpadding="2" 
+cellspacing="1" width="100%">
+      	<tbody><tr>
+      	  <td class="vbmenu_control" align="center" background=""><a 
+href="http://www.codeguru.com/" class="topnav">CodeGuru Home</a></td>
+      	  <td class="vbmenu_control" align="center" background=""><a 
+href="http://www.codeguru.com/Cpp/" class="topnav">VC++ / MFC / C++ </a></td>
+      	  <td class="vbmenu_control" align="center" background=""><a 
+href="http://www.codeguru.com/Csharp/" class="topnav">.NET / C#</a></td>
+      	  <td class="vbmenu_control" align="center" background=""><a 
+href="http://www.codeguru.com/vb/" class="topnav">Visual Basic</a></td>
+      	  <td class="vbmenu_control" align="center" background=""><a 
+href="http://e-newsletters.internet.com/" class="topnav">Newsletters</a></td>
+      	  <td class="vbmenu_control" align="center" background=""><a 
+href="http://www.vbforums.com/" target="new" class="topnav">VB Forums</a></td>
+      	  <td class="vbmenu_control" align="center" background=""><a 
+href="http://www.developer.com/" class="topnav">Developer.com</a></td>
+      	</tr>
+</tbody></table>
+
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+  <tbody><tr>
+    <td align="center" valign="top" width="100%">
+
+	  <br>
+
+	  <table valign="top" style="border-collapse: collapse;" 
+bgcolor="#ffffff" border="0" bordercolor="#555576" cellpadding="0" 
+cellspacing="0" height="200" width="100%">
+ 	    <tbody><tr>
+<!-- blj -->
+<!-- replaced background color from bgcolor="#888888" with class= in following column -->
+	      <td class="vbmenu_control">
+<font face="verdana,arial,helvetica" size="2">
+<br>
+</font><center><font face="verdana,arial,helvetica" size="2"><b><font 
+color="#fff788"><strong>Newest <a href="http://www.codeguru.com/">CodeGuru.com</a>
+Articles:</strong></font></b></font></center>
+<font face="verdana,arial,helvetica" size="2"><br>
+
+		  </font></td>
+		</tr>
+		<tr>
+
+		
+
+		  <td bgcolor="#f1f1f1">
+
+
+			<table align="center" border="0" cellpadding="0" cellspacing="0" 
+width="373">
+			    <tbody><tr>
+			    <td align="center">
+<!-- News Headlines -->
+
+<font size="-1">
+<li type="square">
+<a href="http://www.codeguru.com//columns/kate/article.php/c17019">Customizing
+ MFC Document Recovery</a>
+</li>
+<li type="square">
+<a 
+href="http://www.codeguru.com//csharp/.net/net_general/article.php/c17017">Adding
+ Manage Column Functionality to the Windows Presentation Foundation 
+(WPF) Infragistics Grid</a>
+</li>
+<li type="square">
+<a 
+href="http://www.codeguru.com//csharp/.net/net_asp/article.php/c17015">Perform
+ JavaScript Functions After An ASP.NET UpdatePanel Refresh Using the 
+ASP.NET AJAX Client Library</a>
+</li>
+<li type="square">
+<a 
+href="http://www.codeguru.com//csharp/.net/net_general/article.php/c17013">Codeplex
+ Foundation Digs Into Network Monitoring - Microsoft News</a>
+</li>
+
+</font>
+
+<!-- /News Headlines -->
+
+				</td>
+				</tr>
+			</tbody></table>
+
+<br>
+
+				  <!-- ------ SEARCH BOX ------ -->
+<!--form method=post action="http://search.internet.com/codeguru.earthweb.com">
+<input type="hidden" name="IC_QueryDatabase" value="www.codeguru.com+www.codeguru.com-article+www.codeguru.com-comment"-->
+<form method="post" action="http://search.internet.com/www.codeguru.com"
+ name="myform">
+<input name="starget" value="" type="hidden">
+<input name="IC_QueryDatabase" value="" type="hidden">
+<font face="verdana, arial, helvetica" size="2"></font><center><font 
+face="verdana, arial, helvetica" size="2"><b>Search CodeGuru:</b></font><br>
+<select name="searchsite" style="color: rgb(0, 0, 0); font-family: 
+verdana,arial,sans-serif; font-weight: normal; font-size: 9pt; 
+background-color: rgb(255, 255, 255);">
+<option value="CodeGuru" selected="selected">CodeGuru.com</option>
+<option value="CodeGuru-Articles">---Articles</option>
+<option value="CodeGuru-Comments">---Comments</option>
+<option value="CodeGuru-Forums">---Forums</option>
+<option value="Earthweb">Earthweb</option>
+</select>
+<input name="IC_QueryText" size="9" maxlength="50" type="text">
+&nbsp;<input src="showthread.php_arquivos/search2.gif" name="submit" 
+value="Go" align="ABSMIDDLE" border="0" hspace="0" type="image" 
+vspace="4">
+</center>
+<!-- ------ SEARCH BOX ------ -->
+</form>
+
+<br><!-- blj --><!-- removed 2 BR tags and added one below -->
+
+</td></tr>
+        <tr align="left" valign="bottom">
+	<td align="left" bgcolor="#053061" valign="bottom" width="100%">
+<br><a href="http://www.codeguru.com/"><img 
+src="showthread.php_arquivos/cg_logo3.gif" valign="bottom" 
+align="center" border="0"></a>
+
+		  </td>
+		</tr>
+	  </tbody></table>
+
+    </td>  
+
+	<!--<td>
+	
+	  <table cellpadding="5" cellspacing="0" border="0" valign = top>
+		<tr> -->
+		<td id="bob" valign="top">
+
+				<!-- BOB AD -->
+		  
+<!------ OAS AD'336x280'begin ------> 
+<script language="JavaScript"> 
+<!-- 
+OAS_AD('336x280'); 
+//--> 
+</script> 
+<noscript> 
+<A HREF="http://63.236.18.118/RealMedia/ads/click_nx.ads/intm/webdev/www.codeguru.com/forum@336x280!336x280" > 
+<IMG SRC="http://63.236.18.118/RealMedia/ads/adstream_nx.ads/intm/webdev/www.codeguru.com/forum@336x280!336x280" border=0> 
+</A> 
+</noscript> 
+<!------ OAS AD '336x280' end ------>
+				<!-- /BOB AD -->
+
+	<!--	</td>	
+	  </tr>
+	</table>-->
+</td></tr>
+	</tbody></table>
+
+  
+<!-- JP -->
+<br>
+
+<!-- breadcrumb, login, pm info -->
+<table class="tborder" align="center" border="0" cellpadding="3" 
+cellspacing="1" width="100%">
+<tbody><tr>
+	<td class="alt1" width="100%">
+		
+			<table border="0" cellpadding="0" cellspacing="0">
+			<tbody><tr valign="bottom">
+				<td><a href="#" onclick="history.back(1); return false;"><img 
+title="Go Back" src="showthread.php_arquivos/navbits_start.gif" alt="Go 
+Back" border="0"></a></td>
+				<td>&nbsp;</td>
+				<td width="100%"><span class="navbar"><a 
+href="http://www.codeguru.com/forum/index.php?s=8497326d54d22f1db976ee4d3c222864"
+ accesskey="1">CodeGuru Forums</a></span> 
+	<span class="navbar">&gt; <a 
+href="http://www.codeguru.com/forum/forumdisplay.php?s=8497326d54d22f1db976ee4d3c222864&amp;f=72">CodeGuru
+ Technical FAQs</a></span>
+
+
+	<span class="navbar">&gt; <a 
+href="http://www.codeguru.com/forum/forumdisplay.php?s=8497326d54d22f1db976ee4d3c222864&amp;f=81">CodeGuru
+ Individual FAQs</a></span>
+
+</td>
+			</tr>
+			<tr>
+				<td class="navbar" style="font-size: 10pt; padding-top: 1px;" 
+colspan="3"><a 
+href="http://www.codeguru.com/forum/showthread.php?t=231054"><img 
+title="Reload this Page" class="inlineimg" 
+src="showthread.php_arquivos/navbits_finallink_ltr.gif" alt="Reload this
+ Page" border="0"></a> <strong>
+	 C++ String: How to convert a string into a numeric type?
+
+</strong></td>
+			</tr>
+			</tbody></table>
+		
+	</td>
+
+	<td class="alt2" style="padding: 0px;" nowrap="nowrap">
+		<!-- login form -->
+		<!-- <form action="/login.php" method="post" onsubmit="md5hash(vb_login_password, vb_login_md5password, vb_login_md5password_utf, 0)">
+		<script type="text/javascript" src="clientscript/vbulletin_md5.js?v=373"></script> -->
+
+<form action="/login.php" method="post">
+  <input name="action" value="login" type="hidden">
+  <input name="url" value="/" type="hidden">
+
+		<table border="0" cellpadding="0" cellspacing="3">
+		<tbody><tr>
+			<td class="smallfont" style="white-space: nowrap;"><label 
+for="navbar_username">User Name</label></td>
+			<td><input class="bginput" style="font-size: 11px;" name="username" 
+id="navbar_username" size="10" accesskey="u" tabindex="101" value="User 
+Name" onfocus="if (this.value == 'User Name') this.value = '';" 
+type="text"></td>
+			<td class="smallfont" nowrap="nowrap"><label 
+for="cb_cookieuser_navbar"><input name="perm" value="1" tabindex="103" 
+id="cb_cookieuser_navbar" accesskey="c" type="checkbox">Remember Me?</label></td>
+		</tr>
+		<tr>
+			<td class="smallfont"><label for="navbar_password">Password</label></td>
+			<td><input class="bginput" style="font-size: 11px;" name="password" 
+id="navbar_password" size="10" tabindex="102" type="password"></td>
+			<td><input class="button" value="Log in" tabindex="104" title="Enter 
+your username and password in the boxes provided to login, or click the 
+'register' button to create a profile for yourself." accesskey="s" 
+type="submit"></td>
+		</tr>
+
+
+		</tbody></table>
+		<input name="s" value="8497326d54d22f1db976ee4d3c222864" type="hidden">
+		<input name="securitytoken" value="guest" type="hidden">
+		<input name="action" value="login" type="hidden">
+		<input name="vb_login_md5password" type="hidden">
+		<input name="vb_login_md5password_utf" type="hidden">
+  <input name="url" value="/forum/showthread.php?t=231054" type="hidden">
+		</form>
+		<!-- / login form -->
+	</td>
+
+</tr>
+</tbody></table>
+<!-- / breadcrumb, login, pm info -->
+
+<!-- nav buttons bar -->
+<div class="tborder" style="padding: 1px; border-top-width: 0px;">
+	<table align="center" border="0" cellpadding="0" cellspacing="0" 
+width="100%">
+	<tbody><tr align="center">
+		
+		
+		
+		<td class="vbmenu_control"><a 
+href="http://www.codeguru.com/forum/faq.php?s=8497326d54d22f1db976ee4d3c222864"
+ accesskey="5">FAQ</a></td>
+		
+			<td class="vbmenu_control"><a 
+href="http://www.codeguru.com/forum/memberlist.php?s=8497326d54d22f1db976ee4d3c222864">Members
+ List</a></td>
+		
+		<td class="vbmenu_control"><a 
+href="http://www.codeguru.com/forum/calendar.php?s=8497326d54d22f1db976ee4d3c222864">Calendar</a></td>
+		
+			
+				
+				<td class="vbmenu_control"><a 
+href="http://www.codeguru.com/forum/search.php?s=8497326d54d22f1db976ee4d3c222864&amp;do=getdaily"
+ accesskey="2">Today's Posts</a></td>
+				
+				<td id="navbar_search" class="vbmenu_control"><a 
+href="http://www.codeguru.com/forum/search.php?s=8497326d54d22f1db976ee4d3c222864"
+ accesskey="4" rel="nofollow">Search</a> </td>
+			
+			
+		
+		
+		
+		</tr>
+	</tbody></table>
+</div>
+<!-- / nav buttons bar -->
+
+<br>
+
+
+
+
+	<table class="tborder" align="center" border="0" cellpadding="3" 
+cellspacing="1" width="100%">
+	<tbody><tr>
+		<td class="alt1" width="100%"><strong>CodeGuru Individual FAQs</strong>
+ <span class="smallfont">The indivdual FAQs for CodeGuru. See the 
+specific Topic FAQ forums for index pages and links to these Frequently 
+Asked/Answered Questions.</span></td>
+
+	</tr>
+	</tbody></table>
+	<br>
+
+
+
+<!-- NAVBAR POPUP MENUS -->
+
+	
+	<!-- header quick search form -->
+	<div class="vbmenu_popup" id="navbar_search_menu" style="display: 
+none;" align="left">
+		<table border="0" cellpadding="4" cellspacing="1">
+		<tbody><tr>
+			<td class="thead">Search Forums</td>
+		</tr>
+		<tr>
+			<td class="vbmenu_option" title="nohilite">
+				<form action="search.php?do=process" method="post">
+
+					<input name="do" value="process" type="hidden">
+					<input name="quicksearch" value="1" type="hidden">
+					<input name="childforums" value="1" type="hidden">
+					<input name="exactname" value="1" type="hidden">
+					<input name="s" value="8497326d54d22f1db976ee4d3c222864" 
+type="hidden">
+					<input name="securitytoken" value="guest" type="hidden">
+					<div><input class="bginput" name="query" size="25" tabindex="1001" 
+type="text"><input class="button" value="Go" tabindex="1004" 
+type="submit"></div>
+					<div style="margin-top: 3px;">
+						<label for="rb_nb_sp0"><input name="showposts" value="0" 
+id="rb_nb_sp0" tabindex="1002" checked="checked" type="radio">Show 
+Threads</label>
+						&nbsp;
+						<label for="rb_nb_sp1"><input name="showposts" value="1" 
+id="rb_nb_sp1" tabindex="1003" type="radio">Show Posts</label>
+					</div>
+				</form>
+			</td>
+		</tr>
+		
+		<tr>
+			<td class="vbmenu_option"><a 
+href="http://www.codeguru.com/forum/tags.php?s=8497326d54d22f1db976ee4d3c222864"
+ rel="nofollow">Tag Search</a></td>
+		</tr>
+		
+		<tr>
+			<td class="vbmenu_option"><a 
+href="http://www.codeguru.com/forum/search.php?s=8497326d54d22f1db976ee4d3c222864"
+ accesskey="4" rel="nofollow">Advanced Search</a></td>
+		</tr>
+		
+		</tbody></table>
+	</div>
+	<!-- / header quick search form -->
+	
+
+	
+<!-- / NAVBAR POPUP MENUS -->
+
+<!-- PAGENAV POPUP -->
+	<div class="vbmenu_popup" id="pagenav_menu" style="display: none;">
+		<table border="0" cellpadding="4" cellspacing="1">
+		<tbody><tr>
+			<td class="thead" nowrap="nowrap">Go to Page...</td>
+		</tr>
+		<tr>
+			<td class="vbmenu_option" title="nohilite">
+			<form action="index.php" method="get" onsubmit="return 
+this.gotopage()" id="pagenav_form">
+				<input class="bginput" id="pagenav_itxt" style="font-size: 11px;" 
+size="4" type="text">
+				<input class="button" id="pagenav_ibtn" value="Go" type="button">
+			</form>
+			</td>
+		</tr>
+		</tbody></table>
+	</div>
+<!-- / PAGENAV POPUP -->
+
+
+<center> 
+<script language="JavaScript"> 
+<!-- 
+OAS_AD('sponsor-20'); 
+//--> 
+</script></center>
+
+
+
+
+
+<a name="poststop" id="poststop"></a>
+
+<!-- controls above postbits -->
+<table style="margin-bottom: 3px;" border="0" cellpadding="0" 
+cellspacing="0" width="100%">
+<tbody><tr valign="bottom">
+	
+		<td class="smallfont"><a 
+href="http://www.codeguru.com/forum/newreply.php?s=8497326d54d22f1db976ee4d3c222864&amp;do=newreply&amp;noquote=1&amp;p=678435"
+ rel="nofollow"><img title="Reply" 
+src="showthread.php_arquivos/reply.gif" alt="Reply" border="0"></a></td>
+	
+	
+</tr>
+</tbody></table>
+<!-- / controls above postbits -->
+
+<!-- toolbar -->
+<table class="tborder" style="border-bottom-width: 0px;" align="center" 
+border="0" cellpadding="3" cellspacing="1" width="100%">
+<tbody><tr>
+	<td class="tcat" width="100%">
+		<div class="smallfont">
+		
+		&nbsp;
+		</div>
+	</td>
+	<td style="cursor: pointer;" class="vbmenu_control" id="threadtools" 
+nowrap="nowrap">
+		<a 
+href="http://www.codeguru.com/forum/showthread.php?t=231054&amp;nojs=1#goto_threadtools">Thread
+ Tools</a>
+		<script type="text/javascript"> vbmenu_register("threadtools"); </script>
+ <img alt="" title="" src="showthread.php_arquivos/menu_open.gif" 
+border="0">
+	</td>
+	
+		<td style="cursor: pointer;" class="vbmenu_control" id="threadsearch" 
+nowrap="nowrap">
+			<a 
+href="http://www.codeguru.com/forum/showthread.php?t=231054&amp;nojs=1#goto_threadsearch">Search
+ this Thread</a>
+			<script type="text/javascript"> vbmenu_register("threadsearch"); </script>
+ <img alt="" title="" src="showthread.php_arquivos/menu_open.gif" 
+border="0">
+		</td>
+	
+	
+	
+	<td style="cursor: pointer;" class="vbmenu_control" id="displaymodes" 
+nowrap="nowrap">
+		<a 
+href="http://www.codeguru.com/forum/showthread.php?t=231054&amp;nojs=1#goto_displaymodes">Display
+ Modes</a>
+		<script type="text/javascript"> vbmenu_register("displaymodes"); </script>
+ <img alt="" title="" src="showthread.php_arquivos/menu_open.gif" 
+border="0">
+	</td>
+	
+
+	
+
+</tr>
+</tbody></table>
+<!-- / toolbar -->
+
+
+
+<!-- end content table -->
+
+		
+	
+
+
+<!-- / close content container -->
+<!-- / end content table -->
+
+
+
+
+
+<div id="posts"><!-- post #678435 -->
+
+	<!-- open content container -->
+
+<div align="center">
+	<div class="page" style="width: 100%; text-align: left;">
+		<div style="padding: 0px 5px;" align="left">
+
+	<div id="edit678435" style="padding: 0px 0px 3px;">
+	<!-- this is not the last post shown on the page -->
+
+
+
+<table class="tborder" id="post678435" align="center" border="0" 
+cellpadding="3" cellspacing="1" width="100%">
+<tbody><tr>
+	<td class="thead">
+		<div class="normal" style="float: right;">
+			&nbsp;
+			#<a 
+href="http://www.codeguru.com/forum/showpost.php?s=8497326d54d22f1db976ee4d3c222864&amp;p=678435&amp;postcount=1"
+ target="new" rel="nofollow" id="postcount678435" name="1"><strong>1</strong></a>
+ &nbsp;
+
+<!--JP added reps test-->
+  
+			
+
+<!--/JP added reps test-->
+
+				<script type="text/javascript"> vbrep_register("678435")</script>&nbsp;
+
+			
+			
+			
+			
+			
+		</div>
+
+		<div class="normal">
+			<!-- status icon and date -->
+			<a name="post678435"><img title="Old" class="inlineimg" 
+src="showthread.php_arquivos/post_old.gif" alt="Old" border="0"></a>
+			
+				February 13th, 2003, 12:22 PM
+			
+			
+			<!-- / status icon and date -->
+		</div>
+	</td>
+</tr>
+<tr>
+	<td class="alt2" style="padding: 0px;">
+		<!-- user info -->
+		<table border="0" cellpadding="0" cellspacing="3" width="100%">
+		<tbody><tr>
+			<td class="alt2"><a 
+href="http://www.codeguru.com/forum/member.php?s=8497326d54d22f1db976ee4d3c222864&amp;u=54586"><img
+ title="Gabriel Fleseriu's Avatar" 
+src="showthread.php_arquivos/image.jpg" alt="Gabriel Fleseriu's Avatar" 
+border="0"></a></td>
+			<td nowrap="nowrap">
+
+				<div id="postmenu_678435">
+					
+					<a class="bigusername" 
+href="http://www.codeguru.com/forum/member.php?s=8497326d54d22f1db976ee4d3c222864&amp;u=54586">Gabriel
+ Fleseriu</a>
+					<img title="Gabriel Fleseriu is offline" class="inlineimg" 
+src="showthread.php_arquivos/user_offline.gif" alt="Gabriel Fleseriu is 
+offline" border="0">
+
+
+					<script type="text/javascript"> vbmenu_register("postmenu_678435", true); </script>
+					
+				</div>
+
+				<div class="smallfont">Moderator/Microsoft MVP</div>
+				
+				
+
+			</td>
+			<td width="100%">&nbsp;</td>
+			<td nowrap="nowrap" valign="top">
+
+				<div class="smallfont">
+					<div>Join Date: Jun 2001</div>
+					<div>Location: Switzerland</div>
+					
+					<div>
+						Posts: 4,443
+					</div>
+					
+					
+<div><span id="repdisplay_678435_54586"><img title="Gabriel Fleseriu is a
+ glorious beacon of light (400+)" class="inlineimg" 
+src="showthread.php_arquivos/reputation_pos.gif" alt="Gabriel Fleseriu 
+is a glorious beacon of light (400+)" border="0"><img title="Gabriel 
+Fleseriu is a glorious beacon of light (400+)" class="inlineimg" 
+src="showthread.php_arquivos/reputation_pos.gif" alt="Gabriel Fleseriu 
+is a glorious beacon of light (400+)" border="0"><img title="Gabriel 
+Fleseriu is a glorious beacon of light (400+)" class="inlineimg" 
+src="showthread.php_arquivos/reputation_pos.gif" alt="Gabriel Fleseriu 
+is a glorious beacon of light (400+)" border="0"><img title="Gabriel 
+Fleseriu is a glorious beacon of light (400+)" class="inlineimg" 
+src="showthread.php_arquivos/reputation_pos.gif" alt="Gabriel Fleseriu 
+is a glorious beacon of light (400+)" border="0"><img title="Gabriel 
+Fleseriu is a glorious beacon of light (400+)" class="inlineimg" 
+src="showthread.php_arquivos/reputation_pos.gif" alt="Gabriel Fleseriu 
+is a glorious beacon of light (400+)" border="0"><img title="Gabriel 
+Fleseriu is a glorious beacon of light (400+)" class="inlineimg" 
+src="showthread.php_arquivos/reputation_highpos.gif" alt="Gabriel 
+Fleseriu is a glorious beacon of light (400+)" border="0"></span></div>
+					
+					<div>    </div>
+				</div>
+
+			</td>
+		</tr>
+		</tbody></table>
+		<!-- / user info -->
+	</td>
+</tr>
+<tr>
+	
+	<td class="alt1" id="td_post_678435">
+		
+	<!-- message, attachments, sig -->
+
+		
+
+		
+			<!-- icon and title -->
+			<div class="smallfont">
+				
+				<strong>C++ String: How to convert a string into a numeric type?</strong>
+			</div>
+			<hr style="color: rgb(91, 93, 67); background-color: rgb(91, 93, 
+67);" size="1">
+			<!-- / icon and title -->
+		
+
+		<!-- message -->
+		<div id="post_message_678435">
+			
+			<b>Q:</b> How to convert a string into a numeric type?<br>
+<br>
+<b>A:</b> There is one thing that you are not allowed to ignore when you
+ convert a string into a numeric type: the conversion might fail because
+ the <br>
+string you are converting might not contain a valid representation of a 
+number.<br>
+<br>
+If, for example, you try to convert the string "Hello" to a number, the 
+conversion <b>must</b> fail.<br>
+<br>
+<b>The old C way (deprecated):</b><br>
+<br>
+Many people use the 'atoi()', 'atof()' and the other functions from this
+ "family". They're easy to use but have a major drawback: they return 0 
+both on failure and when converting the string "0", thus making a 
+consistent error detection as good as impossible. We give this little 
+sample for the sake of completeness:<br>
+<br>
+<div style="margin: 5px 20px 20px;">
+	<div class="smallfont" style="margin-bottom: 2px;">Code:</div>
+	<pre class="alt2" dir="ltr" style="margin: 0px; padding: 3px; border: 1px inset; width: 900px; height: 82px; text-align: left; overflow: auto;"><font color="#0000ff">const</font> <font color="#0000ff">char</font>* str_int = <font color="#880000">"777"</font>;
+<font color="#0000ff">const</font> <font color="#0000ff">char</font>* str_float = <font color="#880000">"333.3"</font>;
+<font color="#0000ff">int</font> i = atoi(str_int);
+<font color="#0000ff">float</font> f = atof(str_float);</pre>
+</div><b>A better way:</b><br>
+<br>
+A bit more complicated, but also more consistent way is to use 
+'sscanf()' in one of it's flavors:<br>
+<br>
+<div style="margin: 5px 20px 20px;">
+	<div class="smallfont" style="margin-bottom: 2px;">Code:</div>
+	<pre class="alt2" dir="ltr" style="margin: 0px; padding: 3px; border: 1px inset; width: 900px; height: 242px; text-align: left; overflow: auto;"><font color="#0000ff">const</font> <font color="#0000ff">char</font>* str_int = <font color="#880000">"777"</font>;
+<font color="#0000ff">const</font> <font color="#0000ff">char</font>* str_float = <font color="#880000">"333.3"</font>;
+<font color="#0000ff">int</font> i;
+<font color="#0000ff">float</font> f;
+
+<font color="#0000ff">if</font>(EOF == sscanf(str_int, <font color="#880000">"%d"</font>, &amp;i))
+{
+  <font color="#008800">//error</font>
+}
+
+<font color="#0000ff">if</font>(EOF == sscanf(str_float, <font color="#880000">"%f"</font>, &amp;f))
+{
+  <font color="#008800">//error</font>
+}</pre>
+</div>Since 'sscanf()' takes a 'const char*' parameter, you can directly
+ use a 'CString' with it:<br>
+<br>
+<div style="margin: 5px 20px 20px;">
+	<div class="smallfont" style="margin-bottom: 2px;">Code:</div>
+	<pre class="alt2" dir="ltr" style="margin: 0px; padding: 3px; border: 1px inset; width: 900px; height: 114px; text-align: left; overflow: auto;">CString str_int(<font color="#880000">"777"</font>);
+
+<font color="#0000ff">if</font>(EOF == sscanf(str_int, <font color="#880000">'%d'</font>, &amp;i))
+{
+  <font color="#008800">//error</font>
+}</pre>
+</div>Be very careful with the format specifier (i.e. "%d" in this 
+example). 'sscanf()' has no way to check whether the format specifier 
+and the type of the passed variable match each other. If they don't you 
+will get unexpected<br>
+results. Also note that 'sscanf()' is able to extract more than one 
+numerical value from a string with one call. Have a look in e.g. <a 
+rel="nofollow" href="http://msdn.microsoft.com/" target="_blank">MSDN</a>
+ for details.<br>
+<br>
+<br>
+<b>The C++ way</b><br>
+<br>
+Following sample shows a template function that uses Standard C++ 
+classes to complete the task:<br>
+<br>
+<div style="margin: 5px 20px 20px;">
+	<div class="smallfont" style="margin-bottom: 2px;">Code:</div>
+	<pre class="alt2" dir="ltr" style="margin: 0px; padding: 3px; border: 1px inset; width: 900px; height: 498px; text-align: left; overflow: auto;"><font color="#0000ff">#include</font> &lt;string&gt;
+<font color="#0000ff">#include</font> &lt;sstream&gt;
+<font color="#0000ff">#include</font> &lt;iostream&gt;
+
+<font color="#0000ff">template</font> &lt;<font color="#0000ff">class</font> T&gt;
+<font color="#0000ff">bool</font> from_string(T&amp; t, 
+                 <font color="#0000ff">const</font> std::string&amp; s, 
+                 std::ios_base&amp; (*f)(std::ios_base&amp;))
+{
+  std::istringstream iss(s);
+  <font color="#0000ff">return</font> !(iss &gt;&gt; f &gt;&gt; t).fail();
+}
+
+<font color="#0000ff">int</font> <font color="#0000ff">main</font>()
+{
+  <font color="#0000ff">int</font> i;
+  <font color="#0000ff">float</font> f;
+  
+  <font color="#008800">// the third parameter of from_string() should be </font>
+  <font color="#008800">// one of std::hex, std::dec or std::oct</font>
+  <font color="#0000ff">if</font>(from_string&lt;<font color="#0000ff">int</font>&gt;(i, std::string(<font color="#880000">"ff"</font>), std::hex))
+  {
+    std::cout &lt;&lt; i &lt;&lt; std::endl;
+  }
+  <font color="#0000ff">else</font>
+  {
+    std::cout &lt;&lt; <font color="#880000">"from_string failed"</font> &lt;&lt; std::endl;
+  }
+  
+  <font color="#0000ff">if</font>(from_string&lt;<font color="#0000ff">float</font>&gt;(f, std::string(<font color="#880000">"123.456"</font>), std::dec))
+  {
+    std::cout &lt;&lt; f &lt;&lt; std::endl;
+  }
+  <font color="#0000ff">else</font>
+  {
+    std::cout &lt;&lt; <font color="#880000">"from_string failed"</font> &lt;&lt; std::endl;
+  }
+  <font color="#0000ff">return</font> 0;
+} 
+
+<font color="#008800">/* output:
+255
+123.456
+*/</font></pre>
+</div>This method is not only elegant but also type safe, because the 
+compiler will pick the proper 'std::istringstream::operator &gt;&gt;()' 
+at compile time, according to the operand type.<br>
+<br><br>
+		</div>
+		<!-- / message -->
+
+		
+
+		
+		
+
+		
+
+		
+
+		
+		<!-- edit note -->
+			<div class="smallfont">
+				<hr style="color: rgb(91, 93, 67); background-color: rgb(91, 93, 
+67);" size="1">
+				<em>
+					
+						Last edited by Andreas Masur; July 24th, 2005 at <span 
+class="time">12:22 PM</span>.
+					
+					
+				</em>
+			</div>
+		<!-- / edit note -->
+		
+
+		<div style="margin-top: 10px;" align="right">
+			<!-- controls -->
+			
+			
+			
+				<a 
+href="http://www.codeguru.com/forum/newreply.php?s=8497326d54d22f1db976ee4d3c222864&amp;do=newreply&amp;p=678435"
+ rel="nofollow"><img title="Reply With Quote" 
+src="showthread.php_arquivos/quote.gif" alt="Reply With Quote" 
+border="0"></a>
+			
+			
+			
+			
+			
+			
+			
+				
+			
+			
+			<!-- / controls -->
+		</div>
+
+	<!-- message, attachments, sig -->
+
+	</td>
+</tr>
+</tbody></table>
+
+
+<!-- post 678435 popup menu -->
+<div class="vbmenu_popup" id="postmenu_678435_menu" style="display: 
+none;">
+	<table border="0" cellpadding="4" cellspacing="1">
+	<tbody><tr>
+		<td class="thead">Gabriel Fleseriu</td>
+	</tr>
+	
+		<tr><td class="vbmenu_option"><a 
+href="http://www.codeguru.com/forum/member.php?s=8497326d54d22f1db976ee4d3c222864&amp;u=54586">View
+ Public Profile</a></td></tr>
+	
+	
+	
+	
+	
+		<tr><td class="vbmenu_option"><a 
+href="http://www.codeguru.com/forum/search.php?s=8497326d54d22f1db976ee4d3c222864&amp;do=finduser&amp;u=54586"
+ rel="nofollow">Find all posts by Gabriel Fleseriu</a></td></tr>
+	
+	
+	
+	</tbody></table>
+</div>
+<!-- / post 678435 popup menu -->
+
+
+	</div>
+	
+		</div>
+	</div>
+</div>
+
+<!-- / close content container -->
+
+<!-- / post #678435 --><!-- post #1122645 -->
+
+	<!-- open content container -->
+
+<div align="center">
+	<div class="page" style="width: 100%; text-align: left;">
+		<div style="padding: 0px 5px;" align="left">
+
+	<div id="edit1122645" style="padding: 0px 0px 3px;">
+	<!-- this is not the last post shown on the page -->
+
+
+
+<table class="tborder" id="post1122645" align="center" border="0" 
+cellpadding="3" cellspacing="1" width="100%">
+<tbody><tr>
+	<td class="thead">
+		<div class="normal" style="float: right;">
+			&nbsp;
+			#<a 
+href="http://www.codeguru.com/forum/showpost.php?s=8497326d54d22f1db976ee4d3c222864&amp;p=1122645&amp;postcount=2"
+ target="new" rel="nofollow" id="postcount1122645" name="2"><strong>2</strong></a>
+ &nbsp;
+
+<!--JP added reps test-->
+  
+			
+
+<!--/JP added reps test-->
+
+				<script type="text/javascript"> vbrep_register("1122645")</script>&nbsp;
+
+			
+			
+			
+			
+			
+		</div>
+
+		<div class="normal">
+			<!-- status icon and date -->
+			<a name="post1122645"><img title="Old" class="inlineimg" 
+src="showthread.php_arquivos/post_old.gif" alt="Old" border="0"></a>
+			
+				March 28th, 2005, 03:16 PM
+			
+			
+			<!-- / status icon and date -->
+		</div>
+	</td>
+</tr>
+<tr>
+	<td class="alt2" style="padding: 0px;">
+		<!-- user info -->
+		<table border="0" cellpadding="0" cellspacing="3" width="100%">
+		<tbody><tr>
+			
+			<td nowrap="nowrap">
+
+				<div id="postmenu_1122645">
+					
+					<a class="bigusername" 
+href="http://www.codeguru.com/forum/member.php?s=8497326d54d22f1db976ee4d3c222864&amp;u=1549">Paul
+ McKenzie</a>
+					<img title="Paul McKenzie is offline" class="inlineimg" 
+src="showthread.php_arquivos/user_offline.gif" alt="Paul McKenzie is 
+offline" border="0">
+
+
+					<script type="text/javascript"> vbmenu_register("postmenu_1122645", true); </script>
+					
+				</div>
+
+				<div class="smallfont">Elite Member</div>
+				<div class="smallfont"><b>Power Poster</b></div>
+				
+
+			</td>
+			<td width="100%">&nbsp;</td>
+			<td nowrap="nowrap" valign="top">
+
+				<div class="smallfont">
+					<div>Join Date: Apr 1999</div>
+					
+					
+					<div>
+						Posts: 21,171
+					</div>
+					
+					
+<div><span id="repdisplay_1122645_1549"><img title="Paul McKenzie has a 
+reputation beyond repute (3000+)" class="inlineimg" 
+src="showthread.php_arquivos/reputation_pos.gif" alt="Paul McKenzie has a
+ reputation beyond repute (3000+)" border="0"><img title="Paul McKenzie 
+has a reputation beyond repute (3000+)" class="inlineimg" 
+src="showthread.php_arquivos/reputation_pos.gif" alt="Paul McKenzie has a
+ reputation beyond repute (3000+)" border="0"><img title="Paul McKenzie 
+has a reputation beyond repute (3000+)" class="inlineimg" 
+src="showthread.php_arquivos/reputation_pos.gif" alt="Paul McKenzie has a
+ reputation beyond repute (3000+)" border="0"><img title="Paul McKenzie 
+has a reputation beyond repute (3000+)" class="inlineimg" 
+src="showthread.php_arquivos/reputation_pos.gif" alt="Paul McKenzie has a
+ reputation beyond repute (3000+)" border="0"><img title="Paul McKenzie 
+has a reputation beyond repute (3000+)" class="inlineimg" 
+src="showthread.php_arquivos/reputation_pos.gif" alt="Paul McKenzie has a
+ reputation beyond repute (3000+)" border="0"><img title="Paul McKenzie 
+has a reputation beyond repute (3000+)" class="inlineimg" 
+src="showthread.php_arquivos/reputation_highpos.gif" alt="Paul McKenzie 
+has a reputation beyond repute (3000+)" border="0"><img title="Paul 
+McKenzie has a reputation beyond repute (3000+)" class="inlineimg" 
+src="showthread.php_arquivos/reputation_highpos.gif" alt="Paul McKenzie 
+has a reputation beyond repute (3000+)" border="0"><img title="Paul 
+McKenzie has a reputation beyond repute (3000+)" class="inlineimg" 
+src="showthread.php_arquivos/reputation_highpos.gif" alt="Paul McKenzie 
+has a reputation beyond repute (3000+)" border="0"><img title="Paul 
+McKenzie has a reputation beyond repute (3000+)" class="inlineimg" 
+src="showthread.php_arquivos/reputation_highpos.gif" alt="Paul McKenzie 
+has a reputation beyond repute (3000+)" border="0"><img title="Paul 
+McKenzie has a reputation beyond repute (3000+)" class="inlineimg" 
+src="showthread.php_arquivos/reputation_highpos.gif" alt="Paul McKenzie 
+has a reputation beyond repute (3000+)" border="0"><img title="Paul 
+McKenzie has a reputation beyond repute (3000+)" class="inlineimg" 
+src="showthread.php_arquivos/reputation_highpos.gif" alt="Paul McKenzie 
+has a reputation beyond repute (3000+)" border="0"></span></div>
+					
+					<div>    </div>
+				</div>
+
+			</td>
+		</tr>
+		</tbody></table>
+		<!-- / user info -->
+	</td>
+</tr>
+<tr>
+	
+	<td class="alt1" id="td_post_1122645">
+		
+	<!-- message, attachments, sig -->
+
+		
+
+		
+			<!-- icon and title -->
+			<div class="smallfont">
+				
+				<strong>Re: C++ String: How to convert a string into a numeric type?</strong>
+			</div>
+			<hr style="color: rgb(91, 93, 67); background-color: rgb(91, 93, 
+67);" size="1">
+			<!-- / icon and title -->
+		
+
+		<!-- message -->
+		<div id="post_message_1122645">
+			
+			An addition to the FAQ:<br>
+<br>
+The other routine to convert is strtod().  If converting from a string 
+to a floating point type, the usage of 'strtod()' is much safer than 
+'sscanf()', since <br>
+<br>
+1) the issue of providing the wrong floating point type in the argument 
+list is eliminated, and<br>
+<br>
+2) 'strtod()' will detect if and where a string contains invalid numeric
+ data, and return a pointer to the invalid character in the string (if 
+the string is an invalid numeric string).<br>
+<br>
+If strictly converting from a string to floating point value, 'strtod()'
+ should be recommended instead of 'sscanf()'.  <br>
+<br>
+As a matter of fact, any string-to-numeric function that <b>returns</b> 
+the result (as opposed to you giving the address of a variable for 
+'sscanf()' to manipulate and possibly crash) is preferable.  At least 
+with a return value, you can cast it appropriately, or the built-in C or
+ C++ promotion rules will assign the value correctly.<br>
+<br><br>
+		</div>
+		<!-- / message -->
+
+		
+
+		
+		
+
+		
+
+		
+
+		
+		<!-- edit note -->
+			<div class="smallfont">
+				<hr style="color: rgb(91, 93, 67); background-color: rgb(91, 93, 
+67);" size="1">
+				<em>
+					
+						Last edited by Andreas Masur; July 24th, 2005 at <span 
+class="time">12:23 PM</span>.
+					
+					
+				</em>
+			</div>
+		<!-- / edit note -->
+		
+
+		<div style="margin-top: 10px;" align="right">
+			<!-- controls -->
+			
+			
+			
+				<a 
+href="http://www.codeguru.com/forum/newreply.php?s=8497326d54d22f1db976ee4d3c222864&amp;do=newreply&amp;p=1122645"
+ rel="nofollow"><img title="Reply With Quote" 
+src="showthread.php_arquivos/quote.gif" alt="Reply With Quote" 
+border="0"></a>
+			
+			
+			
+			
+			
+			
+			
+				
+			
+			
+			<!-- / controls -->
+		</div>
+
+	<!-- message, attachments, sig -->
+
+	</td>
+</tr>
+</tbody></table>
+
+
+<!-- post 1122645 popup menu -->
+<div class="vbmenu_popup" id="postmenu_1122645_menu" style="display: 
+none;">
+	<table border="0" cellpadding="4" cellspacing="1">
+	<tbody><tr>
+		<td class="thead">Paul McKenzie</td>
+	</tr>
+	
+		<tr><td class="vbmenu_option"><a 
+href="http://www.codeguru.com/forum/member.php?s=8497326d54d22f1db976ee4d3c222864&amp;u=1549">View
+ Public Profile</a></td></tr>
+	
+	
+	
+	
+		<tr><td class="vbmenu_option"><a href="http://www.dynarithmic.com/">Visit
+ Paul McKenzie's homepage!</a></td></tr>
+	
+	
+		<tr><td class="vbmenu_option"><a 
+href="http://www.codeguru.com/forum/search.php?s=8497326d54d22f1db976ee4d3c222864&amp;do=finduser&amp;u=1549"
+ rel="nofollow">Find all posts by Paul McKenzie</a></td></tr>
+	
+	
+	
+	</tbody></table>
+</div>
+<!-- / post 1122645 popup menu -->
+
+
+	</div>
+	
+		</div>
+	</div>
+</div>
+
+<!-- / close content container -->
+
+<!-- / post #1122645 --><!-- post #1126430 -->
+
+	<!-- open content container -->
+
+<div align="center">
+	<div class="page" style="width: 100%; text-align: left;">
+		<div style="padding: 0px 5px;" align="left">
+
+	<div id="edit1126430" style="padding: 0px 0px 3px;">
+	<!-- this is not the last post shown on the page -->
+
+
+
+<table class="tborder" id="post1126430" align="center" border="0" 
+cellpadding="3" cellspacing="1" width="100%">
+<tbody><tr>
+	<td class="thead">
+		<div class="normal" style="float: right;">
+			&nbsp;
+			#<a 
+href="http://www.codeguru.com/forum/showpost.php?s=8497326d54d22f1db976ee4d3c222864&amp;p=1126430&amp;postcount=3"
+ target="new" rel="nofollow" id="postcount1126430" name="3"><strong>3</strong></a>
+ &nbsp;
+
+<!--JP added reps test-->
+  
+			
+
+<!--/JP added reps test-->
+
+				<script type="text/javascript"> vbrep_register("1126430")</script>&nbsp;
+
+			
+			
+			
+			
+			
+		</div>
+
+		<div class="normal">
+			<!-- status icon and date -->
+			<a name="post1126430"><img title="Old" class="inlineimg" 
+src="showthread.php_arquivos/post_old.gif" alt="Old" border="0"></a>
+			
+				April 4th, 2005, 07:00 AM
+			
+			
+			<!-- / status icon and date -->
+		</div>
+	</td>
+</tr>
+<tr>
+	<td class="alt2" style="padding: 0px;">
+		<!-- user info -->
+		<table border="0" cellpadding="0" cellspacing="3" width="100%">
+		<tbody><tr>
+			
+			<td nowrap="nowrap">
+
+				<div id="postmenu_1126430">
+					
+					<a class="bigusername" 
+href="http://www.codeguru.com/forum/member.php?s=8497326d54d22f1db976ee4d3c222864&amp;u=57222">usman999_1</a>
+					<img title="usman999_1 is offline" class="inlineimg" 
+src="showthread.php_arquivos/user_offline.gif" alt="usman999_1 is 
+offline" border="0">
+
+
+					<script type="text/javascript"> vbmenu_register("postmenu_1126430", true); </script>
+					
+				</div>
+
+				<div class="smallfont">Senior Member</div>
+				
+				
+
+			</td>
+			<td width="100%">&nbsp;</td>
+			<td nowrap="nowrap" valign="top">
+
+				<div class="smallfont">
+					<div>Join Date: Aug 2001</div>
+					<div>Location: Germany</div>
+					
+					<div>
+						Posts: 1,384
+					</div>
+					
+					
+<div><span id="repdisplay_1126430_57222"><img title="usman999_1  is a 
+jewel in the rough (300+)" class="inlineimg" 
+src="showthread.php_arquivos/reputation_pos.gif" alt="usman999_1  is a 
+jewel in the rough (300+)" border="0"><img title="usman999_1  is a jewel
+ in the rough (300+)" class="inlineimg" 
+src="showthread.php_arquivos/reputation_pos.gif" alt="usman999_1  is a 
+jewel in the rough (300+)" border="0"><img title="usman999_1  is a jewel
+ in the rough (300+)" class="inlineimg" 
+src="showthread.php_arquivos/reputation_pos.gif" alt="usman999_1  is a 
+jewel in the rough (300+)" border="0"><img title="usman999_1  is a jewel
+ in the rough (300+)" class="inlineimg" 
+src="showthread.php_arquivos/reputation_pos.gif" alt="usman999_1  is a 
+jewel in the rough (300+)" border="0"></span></div>
+					
+					<div>    </div>
+				</div>
+
+			</td>
+		</tr>
+		</tbody></table>
+		<!-- / user info -->
+	</td>
+</tr>
+<tr>
+	
+	<td class="alt1" id="td_post_1126430">
+		
+	<!-- message, attachments, sig -->
+
+		
+
+		
+			<!-- icon and title -->
+			<div class="smallfont">
+				
+				<strong>Re: Strings: How to convert a string into a numeric type?</strong>
+			</div>
+			<hr style="color: rgb(91, 93, 67); background-color: rgb(91, 93, 
+67);" size="1">
+			<!-- / icon and title -->
+		
+
+		<!-- message -->
+		<div id="post_message_1126430">
+			
+			In addition to the above posted comments, an easier &amp; also 
+liable-to-be-standard is boost.org's <b>boost::lexical_cast</b>. Here is
+ an excerpt from the the documentation...<br>
+<br>
+<div style="margin: 5px 20px 20px;">
+	<div class="smallfont" style="margin-bottom: 2px;">Quote:</div>
+	<table border="0" cellpadding="3" cellspacing="0" width="100%">
+	<tbody><tr>
+		<td class="alt2" style="border: 1px inset;">
+			
+				<div>
+					Originally Posted by <strong>boost.org</strong>
+					
+				</div>
+				<div style="font-style: italic;">lexical_cast is for converting data
+ from one streamable type to another, and it competes more directly with
+ C's atoi() et al. conversion functions as well as with the nonstandard 
+but commonly available itoa() et al. functions.</div>
+			
+		</td>
+	</tr>
+	</tbody></table>
+</div>And also an example shamelessly copied from boost.org...<br>
+<br>
+<div style="margin: 5px 20px 20px;">
+	<div class="smallfont" style="margin-bottom: 2px;">Code:</div>
+	<pre class="alt2" dir="ltr" style="margin: 0px; padding: 3px; border: 1px inset; width: 900px; height: 338px; text-align: left; overflow: auto;"><font color="#0000ff">int</font> <font color="#0000ff">main</font>(<font color="#0000ff">int</font> argc, <font color="#0000ff">char</font>* argv[])
+{
+  <font color="#0000ff">using</font> boost::lexical_cast;
+  <font color="#0000ff">using</font> boost::bad_lexical_cast;
+
+  std::vector&lt;<font color="#0000ff">short</font>&gt; args;
+
+  <font color="#0000ff">while</font>(*++argv)
+  {
+    <font color="#0000ff">try</font>
+    {
+      args.push_back(lexical_cast&lt;<font color="#0000ff">short</font>&gt;(*argv));
+    }
+    <font color="#0000ff">catch</font>(bad_lexical_cast&amp;)
+    {
+      args.push_back(0);
+    }
+  }
+  ...
+}</pre>
+</div>For more info, visit <a rel="nofollow" 
+href="http://www.boost.org/libs/conversion/lexical_cast.htm" 
+target="_blank">'boost::lexical_cast'</a>.<br>
+<br><br>
+		</div>
+		<!-- / message -->
+
+		
+
+		
+		
+
+		
+
+		
+
+		
+		<!-- edit note -->
+			<div class="smallfont">
+				<hr style="color: rgb(91, 93, 67); background-color: rgb(91, 93, 
+67);" size="1">
+				<em>
+					
+						Last edited by Andreas Masur; July 24th, 2005 at <span 
+class="time">12:25 PM</span>.
+					
+					
+				</em>
+			</div>
+		<!-- / edit note -->
+		
+
+		<div style="margin-top: 10px;" align="right">
+			<!-- controls -->
+			
+			
+			
+				<a 
+href="http://www.codeguru.com/forum/newreply.php?s=8497326d54d22f1db976ee4d3c222864&amp;do=newreply&amp;p=1126430"
+ rel="nofollow"><img title="Reply With Quote" 
+src="showthread.php_arquivos/quote.gif" alt="Reply With Quote" 
+border="0"></a>
+			
+			
+			
+			
+			
+			
+			
+				
+			
+			
+			<!-- / controls -->
+		</div>
+
+	<!-- message, attachments, sig -->
+
+	</td>
+</tr>
+</tbody></table>
+
+
+<!-- post 1126430 popup menu -->
+<div class="vbmenu_popup" id="postmenu_1126430_menu" style="display: 
+none;">
+	<table border="0" cellpadding="4" cellspacing="1">
+	<tbody><tr>
+		<td class="thead">usman999_1</td>
+	</tr>
+	
+		<tr><td class="vbmenu_option"><a 
+href="http://www.codeguru.com/forum/member.php?s=8497326d54d22f1db976ee4d3c222864&amp;u=57222">View
+ Public Profile</a></td></tr>
+	
+	
+	
+	
+	
+		<tr><td class="vbmenu_option"><a 
+href="http://www.codeguru.com/forum/search.php?s=8497326d54d22f1db976ee4d3c222864&amp;do=finduser&amp;u=57222"
+ rel="nofollow">Find all posts by usman999_1</a></td></tr>
+	
+	
+	
+	</tbody></table>
+</div>
+<!-- / post 1126430 popup menu -->
+
+
+	</div>
+	
+		</div>
+	</div>
+</div>
+
+<!-- / close content container -->
+
+<!-- / post #1126430 --><!-- post #1578335 -->
+
+	<!-- open content container -->
+
+<div align="center">
+	<div class="page" style="width: 100%; text-align: left;">
+		<div style="padding: 0px 5px;" align="left">
+
+	<div id="edit1578335" style="padding: 0px 0px 3px;">
+	<!-- this is not the last post shown on the page -->
+
+
+
+<table class="tborder" id="post1578335" align="center" border="0" 
+cellpadding="3" cellspacing="1" width="100%">
+<tbody><tr>
+	<td class="thead">
+		<div class="normal" style="float: right;">
+			&nbsp;
+			#<a 
+href="http://www.codeguru.com/forum/showpost.php?s=8497326d54d22f1db976ee4d3c222864&amp;p=1578335&amp;postcount=4"
+ target="new" rel="nofollow" id="postcount1578335" name="4"><strong>4</strong></a>
+ &nbsp;
+
+<!--JP added reps test-->
+  
+			
+
+<!--/JP added reps test-->
+
+				<script type="text/javascript"> vbrep_register("1578335")</script>&nbsp;
+
+			
+			
+			
+			
+			
+		</div>
+
+		<div class="normal">
+			<!-- status icon and date -->
+			<a name="post1578335"><img title="Old" class="inlineimg" 
+src="showthread.php_arquivos/post_old.gif" alt="Old" border="0"></a>
+			
+				May 23rd, 2007, 05:11 AM
+			
+			
+			<!-- / status icon and date -->
+		</div>
+	</td>
+</tr>
+<tr>
+	<td class="alt2" style="padding: 0px;">
+		<!-- user info -->
+		<table border="0" cellpadding="0" cellspacing="3" width="100%">
+		<tbody><tr>
+			
+			<td nowrap="nowrap">
+
+				<div id="postmenu_1578335">
+					
+					<a class="bigusername" 
+href="http://www.codeguru.com/forum/member.php?s=8497326d54d22f1db976ee4d3c222864&amp;u=78027">sandodo</a>
+					<img title="sandodo is offline" class="inlineimg" 
+src="showthread.php_arquivos/user_offline.gif" alt="sandodo is offline" 
+border="0">
+
+
+					<script type="text/javascript"> vbmenu_register("postmenu_1578335", true); </script>
+					
+				</div>
+
+				<div class="smallfont">Member</div>
+				
+				
+
+			</td>
+			<td width="100%">&nbsp;</td>
+			<td nowrap="nowrap" valign="top">
+
+				<div class="smallfont">
+					<div>Join Date: Jun 2002</div>
+					
+					
+					<div>
+						Posts: 129
+					</div>
+					
+					
+<div><span id="repdisplay_1578335_78027"><img title="sandodo is an 
+unknown quantity at this point (&lt;10)" class="inlineimg" 
+src="showthread.php_arquivos/reputation_pos.gif" alt="sandodo is an 
+unknown quantity at this point (&lt;10)" border="0"></span></div>
+					
+					<div>    </div>
+				</div>
+
+			</td>
+		</tr>
+		</tbody></table>
+		<!-- / user info -->
+	</td>
+</tr>
+<tr>
+	
+	<td class="alt1" id="td_post_1578335">
+		
+	<!-- message, attachments, sig -->
+
+		
+
+		
+			<!-- icon and title -->
+			<div class="smallfont">
+				
+				<strong>Re: C++ String: How to convert a string into a numeric type?</strong>
+			</div>
+			<hr style="color: rgb(91, 93, 67); background-color: rgb(91, 93, 
+67);" size="1">
+			<!-- / icon and title -->
+		
+
+		<!-- message -->
+		<div id="post_message_1578335">
+			
+			In addition to FAQ:<br>
+<br>
+Please note that using function sccanf() to convert string into f with 
+float type,<br>
+<div style="margin: 5px 20px 20px;">
+	<div class="smallfont" style="margin-bottom: 2px;">Code:</div>
+	<pre class="alt2" dir="ltr" style="margin: 0px; padding: 3px; border: 1px inset; width: 900px; height: 34px; text-align: left; overflow: auto;">sscanf(str_float, "%f", &amp;f);</pre>
+</div>The result may not be what you want.<br>
+refer to the example of FAQ:<br>
+<div style="margin: 5px 20px 20px;">
+	<div class="smallfont" style="margin-bottom: 2px;">Code:</div>
+	<pre class="alt2" dir="ltr" style="margin: 0px; padding: 3px; border: 1px inset; width: 900px; height: 34px; text-align: left; overflow: auto;">printf("f is now = %f\n", f);</pre>
+</div>You will find the out is: <b>f is now = 333.299988</b><br>
+<br>
+The myth here is sccanf actually convert str_float into double type. if 
+you cast it back to float, there will be some differences, because the 
+way floating point is represented. See this <a rel="nofollow" 
+href="http://www.codeguru.com/forum/showthread.php?t=323835" 
+target="_blank">FAQ</a> for more.
+		</div>
+		<!-- / message -->
+
+		
+
+		
+		
+
+		
+
+		
+
+		
+
+		<div style="margin-top: 10px;" align="right">
+			<!-- controls -->
+			
+			
+			
+				<a 
+href="http://www.codeguru.com/forum/newreply.php?s=8497326d54d22f1db976ee4d3c222864&amp;do=newreply&amp;p=1578335"
+ rel="nofollow"><img title="Reply With Quote" 
+src="showthread.php_arquivos/quote.gif" alt="Reply With Quote" 
+border="0"></a>
+			
+			
+			
+			
+			
+			
+			
+				
+			
+			
+			<!-- / controls -->
+		</div>
+
+	<!-- message, attachments, sig -->
+
+	</td>
+</tr>
+</tbody></table>
+
+
+<!-- post 1578335 popup menu -->
+<div class="vbmenu_popup" id="postmenu_1578335_menu" style="display: 
+none;">
+	<table border="0" cellpadding="4" cellspacing="1">
+	<tbody><tr>
+		<td class="thead">sandodo</td>
+	</tr>
+	
+		<tr><td class="vbmenu_option"><a 
+href="http://www.codeguru.com/forum/member.php?s=8497326d54d22f1db976ee4d3c222864&amp;u=78027">View
+ Public Profile</a></td></tr>
+	
+	
+	
+	
+	
+		<tr><td class="vbmenu_option"><a 
+href="http://www.codeguru.com/forum/search.php?s=8497326d54d22f1db976ee4d3c222864&amp;do=finduser&amp;u=78027"
+ rel="nofollow">Find all posts by sandodo</a></td></tr>
+	
+	
+	
+	</tbody></table>
+</div>
+<!-- / post 1578335 popup menu -->
+
+
+	</div>
+	
+		</div>
+	</div>
+</div>
+
+<!-- / close content container -->
+
+<!-- / post #1578335 --><!-- post #1848802 -->
+
+	<!-- open content container -->
+
+<div align="center">
+	<div class="page" style="width: 100%; text-align: left;">
+		<div style="padding: 0px 5px;" align="left">
+
+	<div id="edit1848802" style="padding: 0px 0px 3px;">
+	
+
+
+
+<table class="tborder" id="post1848802" align="center" border="0" 
+cellpadding="3" cellspacing="1" width="100%">
+<tbody><tr>
+	<td class="thead">
+		<div class="normal" style="float: right;">
+			&nbsp;
+			#<a 
+href="http://www.codeguru.com/forum/showpost.php?s=8497326d54d22f1db976ee4d3c222864&amp;p=1848802&amp;postcount=5"
+ target="new" rel="nofollow" id="postcount1848802" name="5"><strong>5</strong></a>
+ &nbsp;
+
+<!--JP added reps test-->
+  
+			
+
+<!--/JP added reps test-->
+
+				<script type="text/javascript"> vbrep_register("1848802")</script>&nbsp;
+
+			
+			
+			
+			
+			
+		</div>
+
+		<div class="normal">
+			<!-- status icon and date -->
+			<a name="post1848802"><img title="Old" class="inlineimg" 
+src="showthread.php_arquivos/post_old.gif" alt="Old" border="0"></a>
+			
+				June 5th, 2009, 06:32 AM
+			
+			
+			<!-- / status icon and date -->
+		</div>
+	</td>
+</tr>
+<tr>
+	<td class="alt2" style="padding: 0px;">
+		<!-- user info -->
+		<table border="0" cellpadding="0" cellspacing="3" width="100%">
+		<tbody><tr>
+			
+			<td nowrap="nowrap">
+
+				<div id="postmenu_1848802">
+					
+					<a class="bigusername" 
+href="http://www.codeguru.com/forum/member.php?s=8497326d54d22f1db976ee4d3c222864&amp;u=309313">hi1</a>
+					<img title="hi1 is offline" class="inlineimg" 
+src="showthread.php_arquivos/user_offline.gif" alt="hi1 is offline" 
+border="0">
+
+
+					<script type="text/javascript"> vbmenu_register("postmenu_1848802", true); </script>
+					
+				</div>
+
+				<div class="smallfont">Junior Member</div>
+				
+				
+
+			</td>
+			<td width="100%">&nbsp;</td>
+			<td nowrap="nowrap" valign="top">
+
+				<div class="smallfont">
+					<div>Join Date: Sep 2008</div>
+					
+					
+					<div>
+						Posts: 19
+					</div>
+					
+					
+<div><span id="repdisplay_1848802_309313"><img title="hi1 is an unknown 
+quantity at this point (&lt;10)" class="inlineimg" 
+src="showthread.php_arquivos/reputation_pos.gif" alt="hi1 is an unknown 
+quantity at this point (&lt;10)" border="0"></span></div>
+					
+					<div>    </div>
+				</div>
+
+			</td>
+		</tr>
+		</tbody></table>
+		<!-- / user info -->
+	</td>
+</tr>
+<tr>
+	
+	<td class="alt1" id="td_post_1848802">
+		
+	<!-- message, attachments, sig -->
+
+		
+
+		
+			<!-- icon and title -->
+			<div class="smallfont">
+				
+				<strong>Re: C++ String: How to convert a string into a numeric type?</strong>
+			</div>
+			<hr style="color: rgb(91, 93, 67); background-color: rgb(91, 93, 
+67);" size="1">
+			<!-- / icon and title -->
+		
+
+		<!-- message -->
+		<div id="post_message_1848802">
+			
+			Another one easy solution :<ul><li>conversion to string:<br>
+<div style="margin: 5px 20px 20px;">
+	<div class="smallfont" style="margin-bottom: 2px;">Code:</div>
+	<pre class="alt2" dir="ltr" style="margin: 0px; padding: 3px; border: 1px inset; width: 900px; height: 130px; text-align: left; overflow: auto;">template&lt;class T&gt;
+    std::string toString(const T&amp; t)
+{
+     std::ostringstream stream;
+     stream &lt;&lt; t;
+     return stream.str();
+}</pre>
+</div></li>
+<li>conversion from string:<br>
+<div style="margin: 5px 20px 20px;">
+	<div class="smallfont" style="margin-bottom: 2px;">Code:</div>
+	<pre class="alt2" dir="ltr" style="margin: 0px; padding: 3px; border: 1px inset; width: 900px; height: 146px; text-align: left; overflow: auto;">template&lt;class T&gt;
+    T fromString(const std::string&amp; s)
+{
+     std::istringstream stream (s);
+     T t;
+     stream &gt;&gt; t;
+     return t;
+}</pre>
+</div></li>
+</ul>
+		</div>
+		<!-- / message -->
+
+		
+
+		
+		
+
+		
+
+		
+
+		
+		<!-- edit note -->
+			<div class="smallfont">
+				<hr style="color: rgb(91, 93, 67); background-color: rgb(91, 93, 
+67);" size="1">
+				<em>
+					
+						Last edited by ovidiucucu; June 19th, 2009 at <span class="time">03:40
+ AM</span>.
+					
+					
+						Reason: added list, [CODE] and [/CODE] tags
+					
+				</em>
+			</div>
+		<!-- / edit note -->
+		
+
+		<div style="margin-top: 10px;" align="right">
+			<!-- controls -->
+			
+			
+			
+				<a 
+href="http://www.codeguru.com/forum/newreply.php?s=8497326d54d22f1db976ee4d3c222864&amp;do=newreply&amp;p=1848802"
+ rel="nofollow"><img title="Reply With Quote" 
+src="showthread.php_arquivos/quote.gif" alt="Reply With Quote" 
+border="0"></a>
+			
+			
+			
+			
+			
+			
+			
+				
+			
+			
+			<!-- / controls -->
+		</div>
+
+	<!-- message, attachments, sig -->
+
+	</td>
+</tr>
+</tbody></table>
+
+
+<!-- post 1848802 popup menu -->
+<div class="vbmenu_popup" id="postmenu_1848802_menu" style="display: 
+none;">
+	<table border="0" cellpadding="4" cellspacing="1">
+	<tbody><tr>
+		<td class="thead">hi1</td>
+	</tr>
+	
+		<tr><td class="vbmenu_option"><a 
+href="http://www.codeguru.com/forum/member.php?s=8497326d54d22f1db976ee4d3c222864&amp;u=309313">View
+ Public Profile</a></td></tr>
+	
+	
+	
+	
+	
+		<tr><td class="vbmenu_option"><a 
+href="http://www.codeguru.com/forum/search.php?s=8497326d54d22f1db976ee4d3c222864&amp;do=finduser&amp;u=309313"
+ rel="nofollow">Find all posts by hi1</a></td></tr>
+	
+	
+	
+	</tbody></table>
+</div>
+<!-- / post 1848802 popup menu -->
+
+
+	</div>
+	
+		</div>
+	</div>
+</div>
+
+<!-- / close content container -->
+
+<!-- / post #1848802 --><div id="lastpost"></div></div>
+
+<!-- start content table -->
+<!-- open content container -->
+
+<div align="center">
+	<div class="page" style="width: 100%; text-align: left;">
+		<div style="padding: 0px 5px;" align="left">
+
+<!-- / start content table -->
+
+<!-- controls below postbits -->
+<table style="margin-top: 0px;" border="0" cellpadding="0" 
+cellspacing="0" width="100%">
+<tbody><tr valign="top">
+	
+		<td class="smallfont"><a 
+href="http://www.codeguru.com/forum/newreply.php?s=8497326d54d22f1db976ee4d3c222864&amp;do=newreply&amp;noquote=1&amp;p=1848802"
+ rel="nofollow"><img title="Reply" 
+src="showthread.php_arquivos/reply.gif" alt="Reply" border="0"></a></td>
+	
+	
+</tr>
+</tbody></table>
+<!-- / controls below postbits -->
+
+
+
+
+<!-- social bookmarking links -->
+	<br>
+	<table class="tborder" align="center" border="0" cellpadding="3" 
+cellspacing="1" width="100%">
+	<tbody><tr>
+		<td class="thead">Bookmarks</td>
+	</tr>
+	<tr>
+		<td class="alt2" style="padding-top: 0px;"><div style="clear: both;"></div><ul
+ style="list-style-type: none; margin: 0px; padding: 0px;"><li 
+class="smallfont" style="width: 25%; min-width: 160px; float: left; 
+margin-top: 3px;">
+	
+		<a 
+href="http://digg.com/submit?phrase=2&amp;url=http%3A%2F%2Fwww.codeguru.com%2Fforum%2Fshowthread.php%3Ft%3D231054&amp;title=C%2B%2B+String%3A+How+to+convert+a+string+into+a+numeric+type%3F"
+ target="socialbookmark"><img title="Submit Thread to Digg" 
+src="showthread.php_arquivos/bookmarksite_digg.gif" alt="Submit Thread 
+to Digg" class="inlineimg" border="0"></a>
+	
+	<a 
+href="http://digg.com/submit?phrase=2&amp;url=http%3A%2F%2Fwww.codeguru.com%2Fforum%2Fshowthread.php%3Ft%3D231054&amp;title=C%2B%2B+String%3A+How+to+convert+a+string+into+a+numeric+type%3F"
+ target="socialbookmark" style="text-decoration: none;">Digg</a>
+</li><li class="smallfont" style="width: 25%; min-width: 160px; float: 
+left; margin-top: 3px;">
+	
+		<a 
+href="http://del.icio.us/post?url=http%3A%2F%2Fwww.codeguru.com%2Fforum%2Fshowthread.php%3Ft%3D231054&amp;title=C%2B%2B+String%3A+How+to+convert+a+string+into+a+numeric+type%3F"
+ target="socialbookmark"><img title="Submit Thread to del.icio.us" 
+src="showthread.php_arquivos/bookmarksite_delicious.gif" alt="Submit 
+Thread to del.icio.us" class="inlineimg" border="0"></a>
+	
+	<a 
+href="http://del.icio.us/post?url=http%3A%2F%2Fwww.codeguru.com%2Fforum%2Fshowthread.php%3Ft%3D231054&amp;title=C%2B%2B+String%3A+How+to+convert+a+string+into+a+numeric+type%3F"
+ target="socialbookmark" style="text-decoration: none;">del.icio.us</a>
+</li><li class="smallfont" style="width: 25%; min-width: 160px; float: 
+left; margin-top: 3px;">
+	
+		<a 
+href="http://www.stumbleupon.com/submit?url=http%3A%2F%2Fwww.codeguru.com%2Fforum%2Fshowthread.php%3Ft%3D231054&amp;title=C%2B%2B+String%3A+How+to+convert+a+string+into+a+numeric+type%3F"
+ target="socialbookmark"><img title="Submit Thread to StumbleUpon" 
+src="showthread.php_arquivos/bookmarksite_stumbleupon.gif" alt="Submit 
+Thread to StumbleUpon" class="inlineimg" border="0"></a>
+	
+	<a 
+href="http://www.stumbleupon.com/submit?url=http%3A%2F%2Fwww.codeguru.com%2Fforum%2Fshowthread.php%3Ft%3D231054&amp;title=C%2B%2B+String%3A+How+to+convert+a+string+into+a+numeric+type%3F"
+ target="socialbookmark" style="text-decoration: none;">StumbleUpon</a>
+</li><li class="smallfont" style="width: 25%; min-width: 160px; float: 
+left; margin-top: 3px;">
+	
+		<a 
+href="http://www.google.com/bookmarks/mark?op=edit&amp;output=popup&amp;bkmk=http%3A%2F%2Fwww.codeguru.com%2Fforum%2Fshowthread.php%3Ft%3D231054&amp;title=C%2B%2B+String%3A+How+to+convert+a+string+into+a+numeric+type%3F"
+ target="socialbookmark"><img title="Submit Thread to Google" 
+src="showthread.php_arquivos/bookmarksite_google.gif" alt="Submit Thread
+ to Google" class="inlineimg" border="0"></a>
+	
+	<a 
+href="http://www.google.com/bookmarks/mark?op=edit&amp;output=popup&amp;bkmk=http%3A%2F%2Fwww.codeguru.com%2Fforum%2Fshowthread.php%3Ft%3D231054&amp;title=C%2B%2B+String%3A+How+to+convert+a+string+into+a+numeric+type%3F"
+ target="socialbookmark" style="text-decoration: none;">Google</a>
+</li></ul><div style="clear: both;"></div></td>
+	</tr>
+	</tbody></table>
+<!-- / social bookmarking links -->
+
+
+
+
+
+
+
+<!-- lightbox scripts -->
+	<script type="text/javascript" src="showthread.php_arquivos/vbulletin_lightbox.js"></script>
+	<script type="text/javascript">
+	<!--
+	vBulletin.register_control("vB_Lightbox_Container", "posts", 1);
+	//-->
+	</script>
+<!-- / lightbox scripts -->
+
+
+
+
+
+
+
+
+
+<!-- JP Added following as lower page breadcrumbs.... -->
+<table>
+<tbody><tr>
+<td width="100%">
+		
+			<table border="0" cellpadding="0" cellspacing="0">
+			<tbody><tr valign="bottom">
+				<td><a href="#" onclick="history.back(1)"><img title="Go Back" 
+src="showthread.php_arquivos/navbits_start.gif" alt="Go Back" border="0"></a></td>
+				<td>&nbsp;</td>
+				<td width="100%"><span class="navbar"><a 
+href="http://www.codeguru.com/forum/index.php?s=8497326d54d22f1db976ee4d3c222864&amp;"
+ accesskey="1">CodeGuru Forums</a></span> 
+	<span class="navbar">&gt; <a 
+href="http://www.codeguru.com/forum/forumdisplay.php?s=8497326d54d22f1db976ee4d3c222864&amp;f=72">CodeGuru
+ Technical FAQs</a></span>
+
+
+	<span class="navbar">&gt; <a 
+href="http://www.codeguru.com/forum/forumdisplay.php?s=8497326d54d22f1db976ee4d3c222864&amp;f=81">CodeGuru
+ Individual FAQs</a></span>
+
+</td>
+			</tr>
+			<tr>
+				<td class="navbar" style="font-size: 10pt; padding-top: 1px;" 
+colspan="3"><a 
+href="http://www.codeguru.com/forum/showthread.php?t=231054"><img 
+title="Reload this Page" class="inlineimg" 
+src="showthread.php_arquivos/navbits_finallink.gif" alt="Reload this 
+Page" border="0"></a> <strong>
+	 C++ String: How to convert a string into a numeric type?
+
+</strong></td>
+			</tr>
+			</tbody></table>			
+		
+	</td>
+</tr>
+</tbody></table>
+<br> 
+<!-- /JP end of breadcrumbs -->
+
+
+<!-- next / previous links -->
+	<br>
+	<div class="smallfont" align="center">
+		<strong>«</strong>
+			<a 
+href="http://www.codeguru.com/forum/showthread.php?s=8497326d54d22f1db976ee4d3c222864&amp;t=231054&amp;goto=nextoldest"
+ rel="nofollow">Previous Thread</a>
+			|
+			<a 
+href="http://www.codeguru.com/forum/showthread.php?s=8497326d54d22f1db976ee4d3c222864&amp;t=231054&amp;goto=nextnewest"
+ rel="nofollow">Next Thread</a>
+		<strong>»</strong>
+	</div>
+<!-- / next / previous links -->
+
+
+
+
+
+<!-- popup menu contents -->
+<br>
+
+<!-- thread tools menu -->
+<div class="vbmenu_popup" id="threadtools_menu" style="display: none;">
+<form action="postings.php?t=231054&amp;pollid=" method="post" 
+name="threadadminform">
+	<table border="0" cellpadding="4" cellspacing="1">
+	<tbody><tr>
+		<td class="thead">Thread Tools<a name="goto_threadtools"></a></td>
+	</tr>
+	<tr>
+		<td class="vbmenu_option"><img title="Show Printable Version" 
+class="inlineimg" src="showthread.php_arquivos/printer.gif" alt="Show 
+Printable Version"> <a 
+href="http://www.codeguru.com/forum/printthread.php?s=8497326d54d22f1db976ee4d3c222864&amp;t=231054"
+ accesskey="3" rel="nofollow">Show Printable Version</a></td>
+	</tr>
+	<tr>
+		<td class="vbmenu_option"><img title="Email this Page" 
+class="inlineimg" src="showthread.php_arquivos/sendtofriend.gif" 
+alt="Email this Page"> <a 
+href="http://www.codeguru.com/forum/sendmessage.php?s=8497326d54d22f1db976ee4d3c222864&amp;do=sendtofriend&amp;t=231054"
+ rel="nofollow">Email this Page</a></td>
+	</tr>
+	
+	
+
+<!-- JP "Thread resolving" -->
+	<tr>
+		<td class="vbmenu_option"><img title="Resolve" class="inlineimg" 
+src="showthread.php_arquivos/subscribe.gif" alt="Resolve"> <a 
+href="http://www.codeguru.com/forum/showthread.php?s=8497326d54d22f1db976ee4d3c222864&amp;&amp;t=231054&amp;is_resolved=1">
+Mark Thread Resolved</a></td>
+	</tr>
+<!--/JP -->
+
+	
+	</tbody></table>
+</form>
+</div>
+<!-- / thread tools menu -->
+
+<!-- **************************************************** -->
+
+<!-- thread display mode menu -->
+<div class="vbmenu_popup" id="displaymodes_menu" style="display: none;">
+	<table border="0" cellpadding="4" cellspacing="1">
+	<tbody><tr>
+		<td class="thead">Display Modes<a name="goto_displaymodes"></a></td>
+	</tr>
+	<tr>
+	
+		<td class="vbmenu_option" title="nohilite"><img title="Linear Mode" 
+class="inlineimg" src="showthread.php_arquivos/mode_linear.gif" 
+alt="Linear Mode"> <strong>Linear Mode</strong></td>
+	
+	</tr>
+	<tr>
+	
+		<td class="vbmenu_option"><img title="Hybrid Mode" class="inlineimg" 
+src="showthread.php_arquivos/mode_hybrid.gif" alt="Hybrid Mode"> <a 
+href="http://www.codeguru.com/forum/showthread.php?s=8497326d54d22f1db976ee4d3c222864&amp;mode=hybrid&amp;t=231054">Switch
+ to Hybrid Mode</a></td>
+	
+	</tr>
+	<tr>
+	
+		<td class="vbmenu_option"><img title="Threaded Mode" class="inlineimg"
+ src="showthread.php_arquivos/mode_threaded.gif" alt="Threaded Mode"> <a
+ 
+href="http://www.codeguru.com/forum/showthread.php?s=8497326d54d22f1db976ee4d3c222864&amp;p=678435&amp;mode=threaded#post678435">Switch
+ to Threaded Mode</a></td>
+	
+	</tr>
+	</tbody></table>
+</div>
+<!-- / thread display mode menu -->
+
+<!-- **************************************************** -->
+
+
+<!-- thread search menu -->
+<div class="vbmenu_popup" id="threadsearch_menu" style="display: none;">
+<form action="search.php?do=process&amp;searchthreadid=231054" 
+method="post">
+	<table border="0" cellpadding="4" cellspacing="1">
+	<tbody><tr>
+		<td class="thead">Search this Thread<a name="goto_threadsearch"></a></td>
+	</tr>
+	<tr>
+		<td class="vbmenu_option" title="nohilite">
+			<input name="s" value="8497326d54d22f1db976ee4d3c222864" 
+type="hidden">
+			<input name="securitytoken" value="guest" type="hidden">
+			<input name="do" value="process" type="hidden">
+			<input name="searchthreadid" value="231054" type="hidden">
+			<input class="bginput" name="query" size="25" type="text"><input 
+class="button" value="Go" type="submit"><br>
+		</td>
+	</tr>
+	<tr>
+		<td class="vbmenu_option"><a 
+href="http://www.codeguru.com/forum/search.php?s=8497326d54d22f1db976ee4d3c222864&amp;searchthreadid=231054">Advanced
+ Search</a></td>
+	</tr>
+	</tbody></table>
+</form>
+</div>
+<!-- / thread search menu -->
+
+
+<!-- **************************************************** -->
+
+
+
+<!-- / popup menu contents -->
+
+
+<!-- forum rules and admin links -->
+<table align="center" border="0" cellpadding="0" cellspacing="0" 
+width="100%">
+<tbody><tr valign="bottom">
+	<td valign="top" width="100%">
+		<table class="tborder" border="0" cellpadding="3" cellspacing="1" 
+width="210">
+<thead>
+<tr>
+	<td class="thead">
+		<a style="float: right;" href="#top" onclick="return 
+toggle_collapse('forumrules')"><img id="collapseimg_forumrules" 
+src="showthread.php_arquivos/collapse_thead.gif" alt="" border="0"></a>
+		Posting Rules
+	</td>
+</tr>
+</thead>
+<tbody id="collapseobj_forumrules" style="">
+<tr>
+	<td class="alt1" nowrap="nowrap"><div class="smallfont">
+		
+		<div>You <strong>may not</strong> post new threads</div>
+		<div>You <strong>may not</strong> post replies</div>
+		<div>You <strong>may not</strong> post attachments</div>
+		<div>You <strong>may not</strong> edit your posts</div>
+		<hr>
+		
+		<div><a 
+href="http://www.codeguru.com/forum/misc.php?s=8497326d54d22f1db976ee4d3c222864&amp;do=bbcode"
+ target="_blank">BB code</a> is <strong>On</strong></div>
+		<div><a 
+href="http://www.codeguru.com/forum/misc.php?s=8497326d54d22f1db976ee4d3c222864&amp;do=showsmilies"
+ target="_blank">Smilies</a> are <strong>On</strong></div>
+		<div><a 
+href="http://www.codeguru.com/forum/misc.php?s=8497326d54d22f1db976ee4d3c222864&amp;do=bbcode#imgcode"
+ target="_blank">[IMG]</a> code is <strong>On</strong></div>
+		<div>HTML code is <strong>On</strong></div>
+	</div></td>
+</tr>
+</tbody>
+</table>
+	</td>
+	<td class="smallfont" align="right">
+		<table border="0" cellpadding="0" cellspacing="0">
+		
+		<tbody><tr>
+			<td>
+			<div class="smallfont" style="text-align: left; white-space: nowrap;">
+	<form action="forumdisplay.php" method="get">
+	<input name="s" value="8497326d54d22f1db976ee4d3c222864" type="hidden">
+	<input name="daysprune" value="" type="hidden">
+	<strong>Forum Jump</strong><br>
+	<select name="f" onchange="this.form.submit();">
+		<optgroup label="Site Areas">
+			<option value="cp">User Control Panel</option>
+			<option value="pm">Private Messages</option>
+			<option value="subs">Subscriptions</option>
+			<option value="wol">Who's Online</option>
+			<option value="search">Search Forums</option>
+			<option value="home">Forums Home</option>
+		</optgroup>
+		
+		<optgroup label="Forums">
+		<option value="41" class="fjdpth0"> Visual C++ &amp; C++ Programming</option>
+<option value="7" class="fjdpth1">&nbsp; &nbsp;  Visual C++ Programming</option>
+<option value="52" class="fjdpth1">&nbsp; &nbsp;  Visual C++ FAQs</option>
+<option value="9" class="fjdpth1">&nbsp; &nbsp;  C++  (Non Visual C++ 
+Issues)</option>
+<option value="47" class="fjdpth1">&nbsp; &nbsp;  C++ and WinAPI</option>
+<option value="17" class="fjdpth1">&nbsp; &nbsp;  Managed C++ and 
+C++/CLI</option>
+<option value="6" class="fjdpth1">&nbsp; &nbsp;  Visual C++ Bugs &amp; 
+Fixes</option>
+<option value="60" class="fjdpth1">&nbsp; &nbsp;  Graphics Programming</option>
+<option value="63" class="fjdpth1">&nbsp; &nbsp;  Multithreading</option>
+<option value="62" class="fjdpth1">&nbsp; &nbsp;  Network Programming</option>
+<option value="68" class="fjdpth1">&nbsp; &nbsp;  Driver Development</option>
+<option value="98" class="fjdpth1">&nbsp; &nbsp;  Slow Chat: C++0x</option>
+<option value="89" class="fjdpth1">&nbsp; &nbsp;  Slow Chat: Visual C++:
+ Yesterday, Today, and Tomorrow</option>
+<option value="42" class="fjdpth0"> Visual Basic Programming</option>
+<option value="4" class="fjdpth1">&nbsp; &nbsp;  Visual Basic 6.0 
+Programming</option>
+<option value="12" class="fjdpth1">&nbsp; &nbsp;  Visual Basic .NET</option>
+<option value="64" class="fjdpth1">&nbsp; &nbsp;  Crystal Reports</option>
+<option value="53" class="fjdpth1">&nbsp; &nbsp;  VBForums</option>
+<option value="10" class="fjdpth0"> .NET Programming</option>
+<option value="11" class="fjdpth1">&nbsp; &nbsp;  C-Sharp Programming</option>
+<option value="15" class="fjdpth1">&nbsp; &nbsp;  ASP.NET</option>
+<option value="46" class="fjdpth1">&nbsp; &nbsp;  .NET Framework</option>
+<option value="14" class="fjdpth1">&nbsp; &nbsp;  ADO.NET</option>
+<option value="99" class="fjdpth1">&nbsp; &nbsp;  Windows Presentation 
+Foundation (WPF) &amp; XAML forum</option>
+<option value="94" class="fjdpth1">&nbsp; &nbsp;  Silverlight</option>
+<option value="16" class="fjdpth1">&nbsp; &nbsp;  .NET Installation and 
+Configuration Issues</option>
+<option value="67" class="fjdpth0"> Java Programming</option>
+<option value="5" class="fjdpth1">&nbsp; &nbsp;  Java Programming</option>
+<option value="3" class="fjdpth0"> Other Programming</option>
+<option value="88" class="fjdpth1">&nbsp; &nbsp;  AJAX</option>
+<option value="8" class="fjdpth1">&nbsp; &nbsp;  Scripting - Client Side</option>
+<option value="51" class="fjdpth1">&nbsp; &nbsp;  Database</option>
+<option value="13" class="fjdpth1">&nbsp; &nbsp;  XML</option>
+<option value="35" class="fjdpth1">&nbsp; &nbsp;  Wireless/Mobile 
+Development</option>
+<option value="69" class="fjdpth1">&nbsp; &nbsp;  Assembly</option>
+<option value="70" class="fjdpth1">&nbsp; &nbsp;  Scripting - Server 
+Side (PHP, Perl, etc.)</option>
+<option value="96" class="fjdpth0"> Proving Ground: New Forum Areas</option>
+<option value="95" class="fjdpth1">&nbsp; &nbsp;  Python</option>
+<option value="18" class="fjdpth0"> General Discussion</option>
+<option value="19" class="fjdpth1">&nbsp; &nbsp;  General Developer 
+Topics</option>
+<option value="59" class="fjdpth1">&nbsp; &nbsp;  Project Planning, 
+Design, and Management</option>
+<option value="91" class="fjdpth1">&nbsp; &nbsp;  Testers and Testing</option>
+<option value="65" class="fjdpth1">&nbsp; &nbsp;  Algorithms &amp; Data 
+Structures</option>
+<option value="22" class="fjdpth1">&nbsp; &nbsp;  General Discussion / 
+Chit Chat</option>
+<option value="21" class="fjdpth1">&nbsp; &nbsp;  Announcements, Press 
+Releases, &amp; News</option>
+<option value="23" class="fjdpth0"> CodeGuru Community</option>
+<option value="25" class="fjdpth1">&nbsp; &nbsp;  Feedback</option>
+<option value="27" class="fjdpth1">&nbsp; &nbsp;  Articles Suggestions</option>
+<option value="26" class="fjdpth1">&nbsp; &nbsp;  Testing Area</option>
+<option value="37" class="fjdpth1">&nbsp; &nbsp;  Programming Projects</option>
+<option value="39" class="fjdpth2">&nbsp; &nbsp; &nbsp; &nbsp;  C# 
+Game(s) Project</option>
+<option value="90" class="fjdpth2">&nbsp; &nbsp; &nbsp; &nbsp;  Game 
+Engine Project</option>
+<option value="40" class="fjdpth2">&nbsp; &nbsp; &nbsp; &nbsp;  C++ 
+Coding Project</option>
+<option value="50" class="fjdpth2">&nbsp; &nbsp; &nbsp; &nbsp;  Project:
+ Code War</option>
+<option value="28" class="fjdpth0"> Windows Central</option>
+<option value="29" class="fjdpth1">&nbsp; &nbsp;  Directory Services</option>
+<option value="30" class="fjdpth1">&nbsp; &nbsp;  General Windows and 
+DNA Programming</option>
+<option value="31" class="fjdpth1">&nbsp; &nbsp;  Windows OS Issues</option>
+<option value="32" class="fjdpth0"> Jobs</option>
+<option value="33" class="fjdpth1">&nbsp; &nbsp;  Open Positions (Jobs)</option>
+<option value="34" class="fjdpth1">&nbsp; &nbsp;  Looking for Work</option>
+<option value="72" class="fjdpth0"> CodeGuru Technical FAQs</option>
+<option value="85" class="fjdpth1">&nbsp; &nbsp;  C++ FAQs</option>
+<option value="86" class="fjdpth1">&nbsp; &nbsp;  STL FAQs</option>
+<option value="84" class="fjdpth1">&nbsp; &nbsp;  Windows SDK FAQs</option>
+<option value="73" class="fjdpth1">&nbsp; &nbsp;  Visual C++ FAQs</option>
+<option value="82" class="fjdpth1">&nbsp; &nbsp;  MFC FAQs</option>
+<option value="83" class="fjdpth1">&nbsp; &nbsp;  ATL FAQs</option>
+<option value="79" class="fjdpth1">&nbsp; &nbsp;  .NET Framework 
+(non-language specific)  FAQs</option>
+<option value="78" class="fjdpth1">&nbsp; &nbsp;  C# FAQs</option>
+<option value="76" class="fjdpth1">&nbsp; &nbsp;  Visual Basic .NET FAQs</option>
+<option value="75" class="fjdpth1">&nbsp; &nbsp;  Visual Basic FAQs</option>
+<option value="81" class="fjsel" selected="selected">&nbsp; &nbsp;  
+CodeGuru Individual FAQs</option>
+<option value="93" class="fjdpth1">&nbsp; &nbsp;  CodeGuru Individual 
+Visual Basic FAQs</option>
+
+		</optgroup>
+		
+	</select><input class="button" value="Go" type="submit">
+	</form>
+</div>
+			</td>
+		</tr>
+		</tbody></table>
+	</td>
+</tr>
+</tbody></table>
+<!-- /forum rules and admin links -->
+
+<br>
+
+
+
+
+
+<br>
+<div class="smallfont" align="center">All times are GMT -5. The time now
+ is <span class="time">09:59 PM</span>.</div>
+<br>
+
+
+		</div>
+	</div>
+</div>
+
+<!-- / close content container -->
+<!-- /content area table -->
+
+
+<form action="index.php" method="get">
+
+<table class="page" align="center" border="0" cellpadding="3" 
+cellspacing="0" width="100%">
+<tbody><tr>
+	
+		<td class="tfoot">
+			<select name="styleid" onchange="switch_id(this, 'style')">
+				<optgroup label="Quick Style Chooser">
+					<option value="4" class="">-- CodeGuru Forums3.7.3</option>
+<option value="5" class="" selected="selected">---- CodeGuru 
+Forumsredesign3.7.3</option>
+<option value="7" class="">------ Alt-CodeGuru Forumsredesign3.7.3</option>
+
+				</optgroup>
+			</select>
+		</td>
+	
+	
+	<td class="tfoot" align="right" width="100%">
+		<div class="smallfont">
+			<strong>
+				<a href="mailto:webmaster@codeguru.com" rel="nofollow" accesskey="9">Contact
+ Us</a> -
+				<a href="http://www.codeguru.com/forum">CodeGuru Forums</a> -
+				
+				
+				<a href="http://www.codeguru.com/forum/archive/index.php">Archive</a>
+ -
+				
+				<a href="http://www.internet.com/corporate/privacy/aup.html">Privacy
+ Statement</a> -
+				<a href="#top" onclick="self.scrollTo(0, 0); return false;">Top</a>
+			</strong>
+		</div>
+	</td>
+</tr>
+</tbody></table>
+
+<br>
+
+<!-- JP -->
+<div style="background-color: rgb(255, 255, 255); width: 100%;">
+  <!-- bottom leo ad -->
+  <center id="bot"> 
+<!------ OAS AD '468x60-2' begin ------> 
+<script language="JavaScript"> 
+<!-- 
+OAS_AD('468x60-2'); 
+//--> 
+</script> 
+<noscript> 
+<A HREF="http://63.236.18.118/RealMedia/ads/click_nx.ads/intm/webdev/www.codeguru.com/forum@468x60-2!468x60-2" > 
+<IMG SRC="http://63.236.18.118/RealMedia/ads/adstream_nx.ads/intm/webdev/www.codeguru.com/forum@468x60-2!468x60-2" border=0> 
+</A> 
+</noscript> 
+<!------ OAS AD '468x60-2' end ------></center>
+  <!-- Jupitermedia footer -->
+  <!-- Google Analytics -->
+<script src="showthread.php_arquivos/ga.js" type="text/javascript">
+</script>
+<script type="text/javascript">
+<!--     hide from no js browsers
+delete Array.prototype.itemValidation;
+delete Array.prototype.isArray;
+var superTracker = _gat._getTracker("UA-2838492-1");
+superTracker._initData();
+superTracker._trackPageview();
+
+-->
+</script>
+<script type="text/javascript">
+   var site_name =  location.hostname;
+   if ( site_name.indexOf("www.") != 0 ) {
+     site_name  = "www."+site_name ;
+   }
+   document.write("<SCR" + "IPT LANGUAGE='JavaScript1.2' SRC='/icom_includes/footers/sites/"+ site_name +".js' TYPE='text/javascript'><\/SCR" + "IPT>");
+-->
+</script><script language="JavaScript1.2" src="showthread.php_arquivos/www.js" type="text/javascript"></script>
+<script type="text/javascript">
+<!--     hide from no js browsers
+   pageTracker._initData();
+   pageTracker._trackPageview();
+   // -->
+</script>
+<!-- End Google Analytics -->
+
+
+<!-- Revenue Science API -->
+<script src="showthread.php_arquivos/gw.js"></script>
+<script>
+  DM_addEncToLoc("pid","INT");
+  DM_tag();
+
+</script>
+<!-- Revenue Science API -->
+
+
+
+
+<style type="text/css">
+@charset "UTF-8";
+/* CSS Document */
+
+
+/* JOM CSS */
+
+#jomfooter {
+	border: 0;
+	margin: 5px;
+	padding: 5px;
+	}
+
+#jomfooter * {
+	font-family: Arial, Helvetica, sans-serif;
+	padding: 0;
+	margin: 0;
+	}
+
+#jomfooter img {
+	border: 0;
+	behavior: url('/icom_includes/footers/css/iepngfix.htc');
+	padding: 5px;
+	padding: expression('0');
+	}
+
+#jomfooter p {
+	font-size: 11px;
+	line-height: 20px;
+	margin: 10px;
+	}
+
+#jomfooter form b {
+	font-size: 12px;
+	}
+
+#jomfooter a {
+	text-decoration: underline;
+	}
+
+#jomfooter a:hover {
+	text-decoration: none;
+	}
+
+#jomfooter table td {
+	border: 0;
+	}
+
+
+/* GEMS Solutions CSS */
+
+#jomfooter #solsect {
+	margin: 0 auto;
+	padding: 10px 0;
+	width: 720px;
+	}
+
+#jomfooter #solsect .top {
+	background: url('/icom_includes/footers/soltopbg.gif') repeat-x #bbb;
+	height: 26px;
+	margin-bottom: 1px;
+	}
+
+#jomfooter #solsect .top a {
+	font-size: 16px;
+	font-weight: bold;
+	color:#333;
+	text-decoration:none;
+	margin-left: 5px;
+	padding: 0;
+	line-height: 25px;
+	}
+
+#jomfooter #solsect .top a:hover {
+	text-decoration: none;
+	}
+
+#jomfooter #solsect .solsectpad {
+	background: #fff;
+	}
+
+#jomfooter #solsect .solsectpad .main {
+	background:url('/icom_includes/footers/solmidbg.gif') repeat-x #e7e8e3;
+	padding: 5px;
+	margin-bottom: 1px;
+	}
+
+#jomfooter #solsect .solsectpad .main h2 {
+	font-size: 12px;
+	color: #000;
+	font-weight: normal;
+	padding-bottom: 3px;
+	}
+
+#jomfooter #solsect a {
+	color: #333;
+	font-size: 10px;
+	text-decoration: none;
+	line-height: 13px;
+	}
+
+#jomfooter #solsect a:hover {
+	text-decoration: underline;
+	}
+</style>
+
+
+<br clear="all">
+<center><table border="0" cellpadding="5" cellspacing="0">
+                <tbody><tr> 
+                    <td align="center">
+
+<!-- Begin JOM Footer -->
+<div id="jomfooter" align="center">
+<p>
+<a href="http://www.internet.com/Internetcom/Door/41221" id="aup">Acceptable
+ Use Policy</a>
+					<br><br>
+    <a href="http://www.internet.com/"><img 
+src="showthread.php_arquivos/icom_logo_qsfooter.png" border="0" 
+height="40" hspace="0" width="240"></a>
+
+    <br>
+    The Network for Technology Professionals</p>
+        
+        <input name="IC_Summary" value="1" type="HIDDEN">
+        <input name="IC_StartNumber" value="0" type="HIDDEN">
+        <input name="IC_BatchSize" value="10" type="HIDDEN">
+        <input name="IC_RelevanceThreshold" value="50" type="HIDDEN">
+        <input name="IC_QueryDatabase" value="all" type="hidden">
+        <b>Search:</b> 
+        <input name="IC_QueryText" size="45" type="text">
+
+        <input value="Find" name="SUBMIT" 
+src="showthread.php_arquivos/but_find.gif" align="absmiddle" border="0" 
+height="20" type="image" width="41">
+  
+    <p>
+        <a target="_blank" rel="nofollow" 
+href="http://www.internet.com/Internetcom/Door/41188"> About 
+Internet.com</a> 
+        <br>
+      <script type="text/javascript">
+            document.write(' Copyright ');
+            var today = new Date();
+            document.write(  + today.getFullYear());
+            document.write(' QuinStreet Inc. All Rights Reserved.');
+        </script> Copyright 2010 QuinStreet Inc. All Rights Reserved.
+  <noscript>
+        Copyright 2009 QuinStreet Inc. All Rights Reserved.
+  </noscript>
+
+  </p>
+       <p> <a target="_blank" rel="nofollow" 
+href="http://www.internet.com/Internetcom/Door/41187">Legal Notices</a>,
+ <a target="_blank" rel="nofollow" 
+href="http://www.internet.com/Internetcom/Door/41189#Licensing1">Licensing</a>,
+ <a target="_blank" rel="nofollow" 
+href="http://www.internet.com/Internetcom/Door/41189#Permissions">Permissions</a>,
+ <a target="_blank" rel="nofollow" 
+href="http://www.internet.com/Internetcom/Door/41186">Privacy  Policy</a>.
+        <br>
+
+        <a target="_blank" rel="nofollow" 
+href="http://www.internet.com/mediakit/">Advertise</a> | <a 
+target="_blank" rel="nofollow" href="http://e-newsletters.internet.com/">Newsletters</a>
+ |  <a target="_blank" rel="nofollow" 
+href="http://e-newsletters.internet.com/announcement_list.html">E-mail 
+Offers</a>
+
+  </p>  
+</div>
+<br>
+<!-- JP -->
+
+<div align="center">
+	<div class="smallfont" align="center">
+	<!-- Do not remove this copyright notice -->
+	Powered by vBulletin® Version 3.7.3<br>Copyright ©2000 - 2010, Jelsoft 
+Enterprises Ltd.
+	<!-- Do not remove this copyright notice -->
+	</div>
+
+	<div class="smallfont" align="center">
+	<!-- Do not remove  or your scheduled tasks will cease to function -->
+	
+	<!-- Do not remove  or your scheduled tasks will cease to function -->
+
+	
+	</div>
+</div>
+
+
+
+
+
+
+<script type="text/javascript">
+<!--
+	// Main vBulletin Javascript Initialization
+	vBulletin_init();
+//-->
+</script>
+
+<!-- temp -->
+<div style="display: none;">
+	<!-- thread rate -->
+	
+		
+	
+	<!-- / thread rate -->
+</div>
+
+</td></tr></tbody></table></center></div></form></body></html>

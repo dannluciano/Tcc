@@ -1,0 +1,383 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head>
+
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>float to string - C++ Forums</title>
+<link rel="shortcut icon" type="image/x-icon" 
+href="http://www.cplusplus.com/favicon.ico">
+<link rel="stylesheet" type="text/css" 
+href="float%20to%20string%20-%20C++%20Forums_arquivos/main23.css">
+
+<script src="float%20to%20string%20-%20C++%20Forums_arquivos/main23.js" type="text/javascript"></script>
+<script type="text/javascript">
+<!--
+var dynamic; var here; function InitJS() { lb=document.getElementById('loginbox'); dynamic=1; here='/forum/general/8165/'; LoginBox(); DrawButtons(); } var threadauthor='Matt23488'; var author=new Array('Matt23488','Grey Wolf','jsmith','Matt23488','Grey Wolf','Matt23488','jsmith',''); var hids=new Array(37764,37766,37767,37771,37776,37780,37816,0); function PostCount(hid)
+ {
+ eval('document.newpost'+hid+'.ccount.value=document.newpost'+hid+'.content.value.length');
+ }
+ function PostNew(hid)
+ {
+ var El=document.getElementById('i'+hid);
+ eval('b'+hid+'=El.innerHTML');
+ var txt='<form name="newpost'+hid+'" id="newpost'+hid+'" action="/forum/post.form" method="post"><table>';
+ txt+='<tr><td><textarea name="content" cols="100" rows="15" onfocus="PostCount('+hid+')" onkeydown="PostCount('+hid+')" onkeyup="PostCount('+hid+')"><\/textarea><\/td>';
+ txt+='<td><i>Format:<\/i><br><br>';
+ txt+='<a href="javascript:tx(\'[code]\',\'[/code]\',document.newpost'+hid+'.content)"><img src="/ico/text_code.png" width="16" height="16" alt="code" title="Source code"><\/a><a href="javascript:tx(\'[output]\',\'[/output]\',document.newpost'+hid+'.content)"><img src="/ico/text_output.png" width="16" height="16" alt="output" title="Program output"><\/a><a href="javascript:tx(\'[quote]\',\'[/quote]\',document.newpost'+hid+'.content)"><img src="/ico/text_quote.png" width="16" height="16" alt="quote" title="Quotation"><\/a><br>';
+ txt+='<a href="javascript:tx(\'[b]\',\'[/b]\',document.newpost'+hid+'.content)"><img src="/ico/text_b.png" width="16" height="16" alt="bold" title="Bold"><\/a><a href="javascript:tx(\'[i]\',\'[/i]\',document.newpost'+hid+'.content)"><img src="/ico/text_i.png" width="16" height="16" alt="italics" title="Italics"><\/a><a href="javascript:tx(\'[u]\',\'[/u]\',document.newpost'+hid+'.content)"><img src="/ico/text_u.png" width="16" height="16" alt="underline" title="Underline"><\/a><br>';
+ txt+='<a href="javascript:tx(\'[center]\',\'[/center]\',document.newpost'+hid+'.content)"><img src="/ico/text_center.png" width="16" height="16" alt="center" title="Center"><\/a><a href="javascript:tx(\'[s]\',\'[/s]\',document.newpost'+hid+'.content)"><img src="/ico/text_s.png" width="16" height="16" alt="striketrhough" title="Strikethrough"><\/a><a href="javascript:tx(\'[tt]\',\'[/tt]\',document.newpost'+hid+'.content)"><img src="/ico/text_tt.png" width="16" height="16" alt="teletype" title="Teletype (fixed font)"><\/a><br>';
+ txt+='<a href="javascript:tx(\'[small]\',\'[/small]\',document.newpost'+hid+'.content)"><img src="/ico/text_small.png" width="16" height="16" alt="small" title="Small font"><\/a><a href="javascript:tx(\'[sub]\',\'[/sub]\',document.newpost'+hid+'.content)"><img src="/ico/text_sub.png" width="16" height="16" alt="subscript" title="Subscript"><\/a><a href="javascript:tx(\'[sup]\',\'[/sup]\',document.newpost'+hid+'.content)"><img src="/ico/text_sup.png" width="16" height="16" alt="superscript" title="Superscript"><\/a><br><\/td><\/tr>';
+ txt+='<tr><td colspan="2">Length: <input readonly type="text" name="ccount" size="4" maxlength="4" style="text-align:right; background-color:#E0E0E0" value=""> (max=8192) &nbsp; &nbsp; <a href="#" onclick="PostPreview('+hid+'); return false;"><img src="/ico/button_preview.png" width="75" height="20" alt="preview" title="Preview message"><\/a> <a href="#" onclick="newpost'+hid+'.submit()"><img src="/ico/button_submit.png" width="75" height="20" alt="submit" title="Submit"><\/a> <a href="#" onclick="PostCancel('+hid+'); return false;"><img src="/ico/button_cancel.png" width="75" height="20" alt="cancel" title="Cancel"><\/a><input type="hidden" name="y" value="1">';
+ if (hid) txt+='<input type="hidden" name="w" value="editcont"><input type="hidden" name="p" value="'+hid+'">';
+ else txt+='<input type="hidden" name="w" value="reply"><input type="hidden" name="t" value="8165">';
+ txt+='<\/td><\/tr><\/table><\/form>';
+ txt+='<form name="prevpost'+hid+'" id="prevpost'+hid+'" action="/forum/preview.cgi" target="preview'+hid+'" method="post"><input type="hidden" name="content"><\/form>';
+ El.innerHTML=txt;
+ El=document.getElementById('c'+hid);
+ eval('k'+hid+'=El.innerHTML');
+ El.innerHTML='';
+ if (hid>0)
+ {
+ document.getElementById('newpost'+hid).content.value="Loading data. Please wait...";
+ var head=document.getElementsByTagName('head').item(0);
+ var ST=document.getElementById('e'+hid);
+ if (ST) head.removeChild (ST);
+ lscr=document.createElement('script');
+ lscr.src='/forum/jsshowedit.cgi?hid='+hid;
+ lscr.type='text/javascript';
+ lscr.id='e'+hid;
+ head.appendChild(lscr);
+ }
+ return false;
+ }
+ function PostCancel(hid)
+ {
+ document.getElementById('i'+hid).innerHTML=eval('b'+hid);
+ document.getElementById('c'+hid).innerHTML=eval('k'+hid);
+ if (hid>0)
+ document.getElementsByTagName('head').item(0).removeChild(document.getElementById('e'+hid));
+ return false;
+ }
+ function PostPreview(hid)
+ {
+ eval ('document.prevpost'+hid+'.content.value=document.newpost'+hid+'.content.value');
+ eval ('document.prevpost'+hid+'.submit()');
+ }
+ function PostDel(hid)
+ {
+ if (confirm("You are about to delete a post"))
+ location.href='/forum/post.form?w=delete&y=1&p='+hid;
+ }
+ function Report()
+ {
+ resp=prompt ("REPORT TOPIC. Please describe the problem with this topic:","");
+ if (resp != null) {
+ var head=document.getElementsByTagName('head').item(0);
+ newlayer=document.createElement('script');
+ newlayer.src='/forum/reportjs.cgi?url=/forum/general/8165/&resp='+escape(resp);
+ newlayer.type='text/javascript';
+ newlayer.id='layert';
+ head.appendChild(newlayer);
+ alert ('Thanks for your help, '+user+'.');
+ }
+ }
+ function Bookmark (bmval,bmtxt)
+ {
+ if (user)
+ {
+ if (confirm("Are you sure do you want to "+bmtxt+"?"))
+ {
+ document.getElementById('bm').innerHTML=' &nbsp; &nbsp; ... please wait ...';
+ var head=document.getElementsByTagName('head').item(0);
+ layer=document.createElement('script');
+ layer.src='/forum/jsbookmark.cgi?site=cpp&thread=8165&y=1&value='+bmval;
+ layer.type='text/javascript';
+ layer.id='bookmarkbutton';
+ head.appendChild(layer);
+ }
+ else bmk.selectedIndex=0;
+ }
+ }
+ function DrawBookmarkButtons (dummy,dummy2)
+ {
+ if (user)
+ {
+ var head=document.getElementsByTagName('head').item(0);
+ layer=document.createElement('script');
+ layer.src='/forum/jsbookmark.cgi?site=cpp&thread=8165';
+ layer.type='text/javascript';
+ layer.id='bookmarkbutton';
+ head.appendChild(layer);
+ }
+ else document.getElementById('bm').innerHTML='';
+ }
+ function DrawButtons()
+ {
+ var txt=new String;
+ for (n=0;n<7;n++)
+ {
+ txt='';
+ if ( ((access&256)==256) )			txt+='<a href="#" onclick="return PostNew('+hids[n]+')"><img src="/ico/button13_edit.png" alt="Edit" title="Edit this post"><\/a>';
+ if ( ((access&256)==256) || ((1==1)&&(n==7-1)&&(user==author[n])) )
+ txt+=' <a href="#" onclick="return PostDel('+hids[n]+')"><img src="/ico/button13_delete.png" alt="Delete" title="Delete this post"><\/a>';
+ document.getElementById('c'+hids[n]).innerHTML=txt;
+ }
+ if (user)
+ {
+ document.getElementById('submenu').innerHTML='<table class="box"><tr><th><a href="/member/'+user+'/">'+user+'<\/a><\/th><\/tr><tr><td><a href="/forum/myposts.cgi">My topics<\/a><\/td><\/tr><\/table>';
+ }
+ DrawBookmarkButtons();
+ }
+ t0='';
+ 
+//-->
+</script>
+</head><body onload="InitJS()">
+
+<div id="header">
+	<a href="http://www.cplusplus.com/"><img 
+src="float%20to%20string%20-%20C++%20Forums_arquivos/cpp-logo.png" 
+alt="cplusplus.com" height="75" width="198"></a>
+	<div id="bar">
+		<b><a href="http://www.cplusplus.com/">C++</a> : <a 
+href="http://www.cplusplus.com/forum/">Forums</a> : <a 
+href="http://www.cplusplus.com/forum/general/">General C++ Programming</a>
+ : float to string</b>
+	</div>
+	
+	<div id="searchbox">
+		<form id="search" action="/query/search.cgi" method="get">
+		Search: <input name="q" size="13" class="txt"> <input value="Search" 
+class="btn" type="submit">
+		</form>
+	</div>
+	<div id="loginbox"><form name="loginform" id="loginform" 
+onsubmit="return DoLogin()" method="post"><table><tbody><tr><td><b>login:</b></td><td><input
+ class="txt" name="l" size="4" type="text"></td><td><input class="txt" 
+name="p" size="4" type="password"></td><td><input class="btn" 
+value="sign in" type="submit"></td></tr><tr><td colspan="3" 
+class="right"><label for="rememberme">remember me<input class="chk" 
+name="rememberme" id="rememberme" value="1" type="checkbox"> &nbsp;</label></td>
+ <td>[<a href="http://www.cplusplus.com/member/signup.form">register</a>]</td></tr></tbody></table></form></div>
+</div>
+<div id="container">
+	<div id="nav">
+<table class="box">
+	<tbody><tr><th><a href="http://www.cplusplus.com/">C++</a></th></tr>
+	<tr><td><a href="http://www.cplusplus.com/info/"><b>Information</b></a></td></tr>
+	<tr><td><a href="http://www.cplusplus.com/doc/"><b>Documentation</b></a></td></tr>
+	<tr><td><a href="http://www.cplusplus.com/reference/"><b>Reference</b></a></td></tr>
+	<tr><td><a href="http://www.cplusplus.com/articles/"><b>Articles</b></a></td></tr>
+	<tr><td><a href="http://www.cplusplus.com/src/"><b>Sourcecode</b></a></td></tr>
+	<tr><td><span class="selected"><a 
+href="http://www.cplusplus.com/forum/"><b>Forums</b></a></span></td></tr>
+</tbody></table>
+<table class="box">
+	<tbody><tr><th><a href="http://www.cplusplus.com/forum/">Forums</a></th></tr>
+	<tr><td><a href="http://www.cplusplus.com/forum/beginner/"><b>Beginners</b></a></td></tr>
+	<tr><td><a href="http://www.cplusplus.com/forum/windows/"><b>Windows 
+Programming</b></a></td></tr>
+	<tr><td><a href="http://www.cplusplus.com/forum/unices/"><b>UNIX/Linux 
+Programming</b></a></td></tr>
+	<tr><td><span class="selected"><a 
+href="http://www.cplusplus.com/forum/general/"><b>General C++ 
+Programm...</b></a></span></td></tr>
+	<tr><td><a href="http://www.cplusplus.com/forum/articles/"><b>Articles</b></a></td></tr>
+	<tr><td><a href="http://www.cplusplus.com/forum/lounge/"><b>Lounge</b></a></td></tr>
+	<tr><td><a href="http://www.cplusplus.com/forum/jobs/"><b>Jobs</b></a></td></tr>
+</tbody></table>
+<span id="submenu"></span><br>
+
+	</div>
+	<div id="main">
+<script type="text/javascript"><!--
+google_ad_client = "pub-5777024789006368";
+google_ad_width = 728;
+google_ad_height = 90;
+google_ad_format = "728x90_as";
+google_ad_type = "text_image";
+google_ad_channel = "4238618971";
+google_color_border = ["FFFFFF","0066CC","CCCCCC","FFFFFF"];
+google_color_bg = ["FFFFFF","FFFFFF","CCCCCC","FFFFFF"];
+google_color_link = ["3333CC","000070","000000","2D6E89"];
+google_color_text = ["000000","000000","333333","000000"];
+google_color_url = ["000000","000070","666666","2D6E89"];
+//--></script>
+<script type="text/javascript" src="float%20to%20string%20-%20C++%20Forums_arquivos/show_ads.js">
+</script><br>
+
+<div id="content"><table><tbody><tr><td><h3><img 
+src="float%20to%20string%20-%20C++%20Forums_arquivos/forum_question.png"
+ alt="question" title="question" height="16" width="16">&nbsp; float to 
+string</h3>
+</td><td id="titlec"></td></tr></tbody></table><div id="subtitlec"></div>
+<a name="msg37764" id="msg37764"></a>
+<table class="post">
+<tbody><tr class="top"><td><a 
+href="http://www.cplusplus.com/member/Matt23488/"><b>Matt23488</b> (16)</a>
+ &nbsp; <span id="c37764"></span></td><td class="right"><a 
+href="#msg37764"><img 
+src="float%20to%20string%20-%20C++%20Forums_arquivos/link.png" 
+title="Link to this post" alt="Link to this post" height="8" width="16"></a>
+ <script type="text/javascript">When(1235674287)</script>Feb 26, 2009 at
+ 3:51pm<noscript>Mar 23, 2010 at 3:06am UTC</noscript></td></tr>
+<tr><td class="cont" colspan="2" id="i37764">I am working on a project 
+for a class, and I was just wondering if there is a function for 
+converting a float to a string, and vice versa.</td></tr>
+<tr><td colspan="2" class="right"><div class="bot">Last edited on <script type="text/javascript">When(1235674308)</script>Feb
+ 26, 2009 at 3:51pm<noscript>Mar 23, 2010 at 3:06am UTC</noscript> </div></td></tr>
+</tbody></table>
+
+<a name="msg37766" id="msg37766"></a>
+<table class="post">
+<tbody><tr class="top"><td><a 
+href="http://www.cplusplus.com/member/Grey_Wolf/"><b>Grey Wolf</b> 
+(1617)</a> &nbsp; <span id="c37766"></span></td><td class="right"><a 
+href="#msg37766"><img 
+src="float%20to%20string%20-%20C++%20Forums_arquivos/link.png" 
+title="Link to this post" alt="Link to this post" height="8" width="16"></a>
+ <script type="text/javascript">When(1235674896)</script>Feb 26, 2009 at
+ 4:01pm<noscript>Mar 23, 2010 at 3:06am UTC</noscript></td></tr>
+<tr><td class="cont" colspan="2" id="i37766">Look into stringstream...<br>
+<br>
+<div class="auto"><table class="snippet"><tbody><tr><td class="rownum"><tt>1<br>2<br>3<br>4<br>5<br>6<br>7<br>8<br>9<br>10<br>11<br>12<br>13<br>14<br>15<br>16<br>17<br></tt></td>
+<td class="source"><pre><code><dfn>#include &lt;iostream&gt;</dfn>
+<dfn>#include &lt;sstream&gt;</dfn>
+<var>using</var> <var>namespace</var> std;
+
+<var>int</var> main () {
+
+  <var>float</var> val =3.456;
+  stringstream ss (stringstream::in | stringstream::out);
+
+  ss &lt;&lt; val;
+
+  string test = ss.str();
+
+  cout &lt;&lt; test &lt;&lt;endl;
+
+  <var>return</var> 0;
+}</code></pre></td></tr></tbody></table></div>
+</td></tr>
+<tr><td colspan="2" class="right"><div class="bot"> </div></td></tr>
+</tbody></table>
+
+<a name="msg37767" id="msg37767"></a>
+<table class="post">
+<tbody><tr class="top"><td><a 
+href="http://www.cplusplus.com/member/jsmith/"><b>jsmith</b> (3815)</a> 
+&nbsp; <span id="c37767"></span></td><td class="right"><a 
+href="#msg37767"><img 
+src="float%20to%20string%20-%20C++%20Forums_arquivos/link.png" 
+title="Link to this post" alt="Link to this post" height="8" width="16"></a>
+ <script type="text/javascript">When(1235675227)</script>Feb 26, 2009 at
+ 4:07pm<noscript>Mar 23, 2010 at 3:06am UTC</noscript></td></tr>
+<tr><td class="cont" colspan="2" id="i37767"><div class="auto"><table 
+class="snippet"><tbody><tr><td class="rownum"><tt>1<br>2<br></tt></td>
+<td class="source"><pre><code><dfn>#include &lt;boost/lexical_cast.hpp&gt;</dfn>
+cout &lt;&lt; boost::lexical_cast&lt;string&gt;( 3.14 );</code></pre></td></tr></tbody></table></div>
+<br>
+<br>
+is another alternative that does essentially the same thing as what Grey
+ Wolf wrote.<br>
+</td></tr>
+<tr><td colspan="2" class="right"><div class="bot"> </div></td></tr>
+</tbody></table>
+
+<a name="msg37771" id="msg37771"></a>
+<table class="post">
+<tbody><tr class="top"><td><a 
+href="http://www.cplusplus.com/member/Matt23488/"><b>Matt23488</b> (16)</a>
+ &nbsp; <span id="c37771"></span></td><td class="right"><a 
+href="#msg37771"><img 
+src="float%20to%20string%20-%20C++%20Forums_arquivos/link.png" 
+title="Link to this post" alt="Link to this post" height="8" width="16"></a>
+ <script type="text/javascript">When(1235676724)</script>Feb 26, 2009 at
+ 4:32pm<noscript>Mar 23, 2010 at 3:06am UTC</noscript></td></tr>
+<tr><td class="cont" colspan="2" id="i37771">jsmith, it says that 
+boost/lexical_cast.hpp is nonexistant, but greywolf's option works, but i
+ need something that also converts from string to float</td></tr>
+<tr><td colspan="2" class="right"><div class="bot">Last edited on <script type="text/javascript">When(1235678015)</script>Feb
+ 26, 2009 at 4:53pm<noscript>Mar 23, 2010 at 3:06am UTC</noscript> </div></td></tr>
+</tbody></table>
+
+<a name="msg37776" id="msg37776"></a>
+<table class="post">
+<tbody><tr class="top"><td><a 
+href="http://www.cplusplus.com/member/Grey_Wolf/"><b>Grey Wolf</b> 
+(1617)</a> &nbsp; <span id="c37776"></span></td><td class="right"><a 
+href="#msg37776"><img 
+src="float%20to%20string%20-%20C++%20Forums_arquivos/link.png" 
+title="Link to this post" alt="Link to this post" height="8" width="16"></a>
+ <script type="text/javascript">When(1235677475)</script>Feb 26, 2009 at
+ 4:44pm<noscript>Mar 23, 2010 at 3:06am UTC</noscript></td></tr>
+<tr><td class="cont" colspan="2" id="i37776">  <div class="auto"><table 
+class="snippet"><tbody><tr><td class="rownum"><tt>1<br>2<br>3<br>4<br>5<br></tt></td>
+<td class="source"><pre><code>string test =<kbd>"445.26"</kbd>;
+  ss &lt;&lt; test;
+  <var>float</var> val; 
+  ss &gt;&gt; val;  
+  cout &lt;&lt; val &lt;&lt;endl;</code></pre></td></tr></tbody></table></div>
+<br>
+<br>
+To use Boost you would have to download and install it. <a 
+href="http://www.boost.org/">http://www.boost.org/</a></td></tr>
+<tr><td colspan="2" class="right"><div class="bot"> </div></td></tr>
+</tbody></table>
+
+<a name="msg37780" id="msg37780"></a>
+<table class="post">
+<tbody><tr class="top"><td><a 
+href="http://www.cplusplus.com/member/Matt23488/"><b>Matt23488</b> (16)</a>
+ &nbsp; <span id="c37780"></span></td><td class="right"><a 
+href="#msg37780"><img 
+src="float%20to%20string%20-%20C++%20Forums_arquivos/link.png" 
+title="Link to this post" alt="Link to this post" height="8" width="16"></a>
+ <script type="text/javascript">When(1235678040)</script>Feb 26, 2009 at
+ 4:54pm<noscript>Mar 23, 2010 at 3:06am UTC</noscript></td></tr>
+<tr><td class="cont" colspan="2" id="i37780">Well I went with GreyWolf's
+ example, and I finished the project, thanks guys.</td></tr>
+<tr><td colspan="2" class="right"><div class="bot"> </div></td></tr>
+</tbody></table>
+
+<a name="msg37816" id="msg37816"></a>
+<table class="post">
+<tbody><tr class="top"><td><a 
+href="http://www.cplusplus.com/member/jsmith/"><b>jsmith</b> (3815)</a> 
+&nbsp; <span id="c37816"></span></td><td class="right"><a 
+href="#msg37816"><img 
+src="float%20to%20string%20-%20C++%20Forums_arquivos/link.png" 
+title="Link to this post" alt="Link to this post" height="8" width="16"></a>
+ <script type="text/javascript">When(1235685891)</script>Feb 26, 2009 at
+ 7:04pm<noscript>Mar 23, 2010 at 3:06am UTC</noscript></td></tr>
+<tr><td class="cont" colspan="2" id="i37816">Ya, too bad.<br>
+<br>
+<div class="auto"><table class="snippet"><tbody><tr><td class="rownum"><tt>&nbsp;</tt></td>
+<td class="source"><pre><code><var>float</var> f = boost::lexical_cast&lt;<var>float</var>&gt;( <kbd>"3.14"</kbd> );</code></pre></td></tr></tbody></table></div>
+<br>
+<br>
+boost works both ways.<br>
+</td></tr>
+<tr><td colspan="2" class="right"><div class="bot"> </div></td></tr>
+</tbody></table>
+<br>
+<div class="cont" id="i0"></div>
+<div id="c0">This topic is archived - New replies not allowed.</div>
+<div id="bm"></div></div>
+	</div>
+	<div id="footer">
+		<a href="http://www.cplusplus.com/">Home page</a> | <a 
+href="http://www.cplusplus.com/member/privacy.cgi">Privacy policy</a><br>©
+ cplusplus.com, 2000-2009 - All rights reserved - <i>v2.3</i><br><a 
+href="http://www.cplusplus.com/member/contact.form?referrer=http://www.cplusplus.com/forum/general/8165/">Spotted
+ an error? contact us</a>
+	</div>
+</div>
+
+<script src="float%20to%20string%20-%20C++%20Forums_arquivos/urchin.js" type="text/javascript">
+</script>
+<script type="text/javascript">
+_uacct = "UA-521783-1";
+urchinTracker();
+</script>
+</body></html>
