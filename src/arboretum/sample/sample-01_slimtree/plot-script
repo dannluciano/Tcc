@@ -1,0 +1,8 @@
+set title "Cities of Brazil"
+set xlabel "Longitude"
+set ylabel "Latitude"
+set xrange [-80:-30]
+set yrange [-40:10]
+set grid
+plot \
+"BrazilianCities.txt" using 3:2

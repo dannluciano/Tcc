@@ -1,0 +1,7 @@
+\form#0:$ d^2 = (\sqrt[2]{d^2})^2 $
+\form#1:$ {{(1 + n) * n} \over {2}} - 1 $
+\form#2:$ n^2 $
+\form#3:$O(N^2)$
+\form#4:$d'^2(o_1,o_2) = d(o_1,o_2)^2 - (x_1 - x_2)^2$
+\form#5:$p = {size \over total} $
+\form#6:$ \forall a,b \in D, d(a,b) \le GetDistanceLimit()$
